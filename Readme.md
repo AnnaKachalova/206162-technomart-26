@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Анна Качалова](https://up.htmlacademy.ru/htmlcss/26/user/206162).
-* Наставник: Анатолий Долгов.
+* Наставник: [Анатолий Долгов](https://htmlacademy.ru/profile/dolgov_anatoly).
 
 ---
 
