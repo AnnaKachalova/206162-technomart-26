@@ -69,29 +69,41 @@
         <h2>ПЕРФОРАТОРЫ</h2>
       </section>
 
-      <!--Панель фильтров-->
-      <aside class="filters">
+      <aside>
         <h3 class="filters__title">ФИЛЬТР:</h3>
-        <h4 class="price__title">ЦЕНА:</h4>
-        <!--Пока оставила так без инпута-->
+        <form action="#" method="POST">
+          <fieldset>
+            <legend class="price__title">ЦЕНА:</legend>
+            <input type="range" min="1" max="30000" step="1" />
+          </fieldset>
+          <fieldset>
+            <legend class="price__title">ПРОИЗВОДИТЕЛИ:</legend>
+            <input type="checkbox" vallue="bosch" id="bosch-field" checked />
+            <label for="bosch-field">BOSCH</label>
 
-        <h4 class="manufacturers__title">ПРОИЗВОДИТЕЛИ:</h4>
-        <ul class="manufacturers__list">
-          <li class="manufacturers__item">BOSCH</li>
-          <li class="manufacturers__item">ИНТЕРСКОЛ</li>
-          <li class="manufacturers__item">MAKIta</li>
-          <li class="manufacturers__item">Dewalt</li>
-          <li class="manufacturers__item">Hitachi</li>
-        </ul>
+            <input type="checkbox" vallue="interskol" id="interskol-field" />
+            <label for="interskol-field">ИНТЕРСКОЛ</label>
 
-        <h4 class="power__title">ПИТАНИЕ:</h4>
-        <ul class="power__list">
-          <li class="power__item">Аккумуляторные</li>
-          <li class="power__item">Сетевые</li>
-        </ul>
-        <button class="filters__button" type="button">ПОКАЗАТЬ</button>
+            <input type="checkbox" vallue="makita" id="makita-field" checked />
+            <label for="makita-field">MAKIta</label>
+
+            <input type="checkbox" vallue="dewalt" id="dewalt-field" />
+            <label for="dewalt-field">Dewalt</label>
+
+            <input type="checkbox" vallue="hitachi" id="hitachi-field" />
+            <label for="hitachi-field">Hitachi</label>
+          </fieldset>
+          <fieldset>
+            <legend class="price__title">ПИТАНИЕ:</legend>
+            <input type="radio" name="power" id="rechargeable_field" checked />
+            <label for="rechargeable_field">Аккумуляторные</label>
+
+            <input type="radio" name="power" id="network_field" />
+            <label for="network_field">Сетевые</label>
+          </fieldset>
+          <input type="button" value="Показать" />
+        </form>
       </aside>
-
       <!--Панель сортировки товаров-->
       <section class="sort">
         <h3 class="sort__title">СОРТИРОВКА:</h3>
