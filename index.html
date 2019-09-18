@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>HTML Academy: Техномарт</title>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header>
@@ -58,7 +59,7 @@
       </nav>
     </header>
     <main class="main">
-      <h1 class="main__title">ТЕХНОМАРТ</h1>
+      <h1 class="main__title visually-hidden">ТЕХНОМАРТ</h1>
 
       <!--Баннеры-->
       <section class="banners__container">
@@ -242,7 +243,7 @@
 
       <!--О компании-->
       <section class="sections__container">
-        <h2>О Компании</h2>
+        <h2 class="visually-hidden">О Компании</h2>
         <section class="features">
           <h3 class="features_title">КОМПАНИЯ «ТЕХНОМАРТ»</h3>
           <p class="features_text">
@@ -312,13 +313,19 @@
       </p>
       <ul class="socials__list">
         <li class="socials__item">
-          <a href="#"><img src="img/vk-icon.svg" width="26" height="15" alt="Вконтакте"/></a>
+          <a href="#" aria-label="Техномарт во вконтакте">
+            <img src="img/vk-icon.svg" width="26" height="15" alt="Вконтакте" />
+          </a>
         </li>
         <li class="socials__item">
-          <a href="#"><img src="img/fb-icon.svg" width="12" height="22" alt="Фейсбук"/></a>
+          <a href="#" aria-label="Техномарт в фейсбуке">
+            <img src="img/fb-icon.svg" width="12" height="22" alt="Фейсбук" />
+          </a>
         </li>
         <li class="socials__item">
-          <a href="#"><img src="img/insta-icon.svg" width="21" height="21" alt="Инстаграм"/></a>
+          <a href="#" aria-label="Техномарт в инстаграме">
+            <img src="img/insta-icon.svg" width="21" height="21" alt="Инстаграм" />
+          </a>
         </li>
       </ul>
       <p class="feedback">
