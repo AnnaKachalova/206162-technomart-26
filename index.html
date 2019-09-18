@@ -215,29 +215,29 @@
           </li>
         </ul>
 
-        <div class="services-description--delivery">
-          <h2 class="services-description__title--delivery">Доставка</h2>
-          <p class="services-description__text--delivery">
+        <div class="services-description services-description--delivery">
+          <h2 class="services-description__title">Доставка</h2>
+          <p class="services-description__text">
             Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь
             мы неплохо заработаем, поднимая его на ваш этаж!
           </p>
           <img src="img/truck.png" width="468" height="261" alt="Изображение грузовика" />
         </div>
-        <div class="services-description--guarantee">
-          <h2 class="services-description__title--guarantee">Гарантия</h2>
-          <p class="services-description__text--guarantee">
+        <div class="services-description services-description--guarantee">
+          <h2 class="services-description__title">Гарантия</h2>
+          <p class="services-description__text">
             Если купленный у нас товар поломается или заискрит, а также в случае пожара,
             спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы
             обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.
           </p>
-          <img src="img/medal.png" width="389" height="283" alt="Изображение грузовика" />
+          <img src="img/medal.png" width="389" height="283" alt="Изображение медали" />
         </div>
-        <div class="services-description--credit">
-          <h2 class="services-description__title--credit">Кредит</h2>
-          <p class="services-description__text--credit">
+        <div class="services-description services-description--credit">
+          <h2 class="services-description__title">Кредит</h2>
+          <p class="services-description__text">
             Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.
           </p>
-          <img src="img/credit.png" width="465" height="285" alt="Изображение грузовика" />
+          <img src="img/credit.png" width="465" height="285" alt="Изображение денег" />
         </div>
       </section>
 
@@ -340,20 +340,26 @@
 
     <!--Форма обратной связи-->
     <form action="#" method="POST" class="feedback-popup">
-      <label for="name-field">Ваше имя:</label>
-      <input type="text" name="name" id="name-field" placeholder="Имя Фамилия" required />
-
-      <label for="email-field">Ваш e-mail:</label>
-      <input type="email" name="email" id="email-field" placeholder="email@example.com" required />
-
-      <label for="text-field">Текст письма:</label>
-      <!--Временно добавила rows="7" cols="55" пока не будет стилей-->
-      <textarea name="text" id="text-field" rows="7" cols="55">В свободной форме</textarea>
-
       <button class="feedback-popup__button-close" type="button">Закрыть</button>
 
+      <div>
+        <label for="name-field">Ваше имя:</label>
+        <input type="text" name="name" id="name-field" placeholder="Имя Фамилия" required />
+
+        <label for="email-field">Ваш e-mail:</label>
+        <input
+          type="email"
+          name="email"
+          id="email-field"
+          placeholder="email@example.com"
+          required
+        />
+      </div>
+      <label for="text-field">Текст письма:</label>
+      <textarea name="text" id="text-field" rows="7" cols="55">В свободной форме</textarea>
+
       <div class="feedback-popup__footer">
-        <input class="feedback-popup__submit" type="submit" value="Отправить" />
+        <button class="feedback-popup__submit" type="submit">Отправить</button>
       </div>
     </form>
 
