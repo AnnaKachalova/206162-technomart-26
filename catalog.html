@@ -3,6 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <title>HTML Academy: Техномарт</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i|PT+Sans:400,700&display=swap&subset=cyrillic"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -29,7 +34,7 @@
         <!--  -->
         <ul class="nav-second__list">
           <li class="nav-second__item">
-            <p>
+            <p class="nav-second__text">
               Интернет-магазин строительных материалов и инструментов для ремонта
             </p>
           </li>
@@ -41,7 +46,7 @@
           </li>
           <li class="nav-second__item">
             <div>
-              <button type="button">Равшан Джамшутович</button>
+              <button class="exit__button" type="button">Равшан Джамшутович</button>
             </div>
             <button class="orders__button" type="button">Мои заказы</button>
             <button class="personal-account__button" type="button">Личный кабинет</button>
@@ -67,18 +72,18 @@
           <li class="breadcrumbs__item"><a href="#">Инструмент</a></li>
           <li class="breadcrumbs__item"><a href="#">Перфораторы</a></li>
         </ul>
-        <h2>ПЕРФОРАТОРЫ</h2>
+        <h2 class="catalog_title">ПЕРФОРАТОРЫ</h2>
       </section>
 
-      <aside>
+      <aside class="filters">
         <h3 class="filters__title">ФИЛЬТР:</h3>
-        <form action="#" method="POST">
+        <form action="#" method="POST" class="form_filters">
           <fieldset>
             <h4 class="price__title">ЦЕНА:</h4>
             <input type="range" min="1" max="30000" step="1" />
           </fieldset>
           <fieldset>
-            <h4 class="price__title">ПРОИЗВОДИТЕЛИ:</h4>
+            <h4 class="manufacturer__title">ПРОИЗВОДИТЕЛИ:</h4>
             <input type="checkbox" value="bosch" id="bosch-field" checked />
             <label for="bosch-field">BOSCH</label>
 
@@ -95,14 +100,14 @@
             <label for="hitachi-field">Hitachi</label>
           </fieldset>
           <fieldset>
-            <h4 class="price__title">ПИТАНИЕ:</h4>
+            <h4 class="power__title">ПИТАНИЕ:</h4>
             <input type="radio" name="power" id="rechargeable_field" checked />
             <label for="rechargeable_field">Аккумуляторные</label>
 
             <input type="radio" name="power" id="network_field" />
             <label for="network_field">Сетевые</label>
           </fieldset>
-          <input type="submit" value="Показать" />
+          <input type="submit" value="Показать" class="filters__button" />
         </form>
       </aside>
       <!--Панель сортировки товаров-->
@@ -276,7 +281,7 @@
         <span class="contacts__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
         <a class="contacts__tel" href="tel:+78125550555">+7 (812) 555-05-55</a>
       </p>
-      <ul class="pagination__list">
+      <ul class="pagination__list pagination__list--additional">
         <li class="pagination__item"><a href="#">Материалы</a></li>
         <li class="pagination__item"><a href="#">Техника</a></li>
         <li class="pagination__item"><a href="#">Инструмент</a></li>
