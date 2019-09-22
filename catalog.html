@@ -11,27 +11,30 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header>
+    <header class="header">
       <nav class="nav">
-        <a class="logo__link" href="index.html">
-          <img
-            class="logo__img"
-            src="img/logo.png"
-            width="109"
-            height="19"
-            alt="Логотип сайта ТЕХНОМАРТ"
-          />
-        </a>
-        <!--  -->
+        <!-- Первая строка навигации -->
         <ul class="nav-first__list">
           <li class="nav-first__item">
+            <a class="logo__link" href="index.html">
+              <img
+                class="logo__img"
+                src="img/logo.png"
+                width="109"
+                height="19"
+                alt="Логотип сайта ТЕХНОМАРТ"
+              />
+            </a>
+          </li>
+          <li class="nav-first__item nav-first__item--search">
             <button class="search__button" type="button">Поиск</button>
           </li>
-          <li class="nav-first__item"><a href="#">Закладки</a></li>
-          <li class="nav-first__item"><a href="#">Корзина</a></li>
-          <li class="nav-first__item"><a href="#">Оформить заказ</a></li>
+          <li class="nav-first__item nav-first__item--bookmarks"><a href="#">Закладки</a></li>
+          <li class="nav-first__item nav-first__item--basket"><a href="#">Корзина</a></li>
+          <li class="nav-first__item nav-first__item--checkout"><a href="#">Оформить заказ</a></li>
         </ul>
-        <!--  -->
+
+        <!-- Вторая строка навигации -->
         <ul class="nav-second__list">
           <li class="nav-second__item">
             <p class="nav-second__text">
@@ -40,8 +43,8 @@
           </li>
           <li class="nav-second__item">
             <div>
-              <a href="tel:+78125550555">+7 (812) 555-05-55</a>
-              <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+              <a href="tel:+78125550555" class="nav-second__tel">+7 (812) 555-05-55</a>
+              <p class="nav-second__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
             </div>
           </li>
           <li class="nav-second__item">
@@ -258,11 +261,11 @@
         </p>
       </section>
     </main>
-    <footer>
+    <footer class="footer">
       <a class="logo__link" href="index.html">
         <img
           class="logo__img"
-          src="img/logo.png"
+          src="img/logo_bottom.png"
           width="138"
           height="23"
           alt="Логотип сайта ТЕХНОМАРТ"
@@ -285,7 +288,7 @@
         <li class="pagination__item"><a href="#">Инструмент</a></li>
         <li class="pagination__item"><a href="#">Спецпредложения</a></li>
       </ul>
-      <p>
+      <p class="rights__container">
         <span>© 2010–2019 Компания «Техномарт»</span>
         <span>Все права защищены</span>
       </p>
@@ -323,7 +326,7 @@
 
       <div class="success-popup__footer">
         <button class="success-popup__button-continue" type="button">Продолжить покупки</button>
-        <a class="success-popup__link-checkout" href="#">Оформить заказ</a>
+        <a class="success-popup__link-checkout button" href="#">Оформить заказ</a>
       </div>
     </section>
   </body>

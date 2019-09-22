@@ -11,26 +11,27 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header>
+    <header class="header">
       <nav class="nav">
-        <a class="logo__link" href="index.html">
-          <img
-            class="logo__img"
-            src="img/logo.png"
-            width="109"
-            height="19"
-            alt="Логотип сайта ТЕХНОМАРТ"
-          />
-        </a>
-
         <!-- Первая строка навигации -->
         <ul class="nav-first__list">
           <li class="nav-first__item">
+            <a class="logo__link" href="index.html">
+              <img
+                class="logo__img"
+                src="img/logo.png"
+                width="109"
+                height="19"
+                alt="Логотип сайта ТЕХНОМАРТ"
+              />
+            </a>
+          </li>
+          <li class="nav-first__item nav-first__item--search">
             <button class="search__button" type="button">Поиск</button>
           </li>
-          <li class="nav-first__item"><a href="#">Закладки</a></li>
-          <li class="nav-first__item"><a href="#">Корзина</a></li>
-          <li class="nav-first__item"><a href="#">Оформить заказ</a></li>
+          <li class="nav-first__item nav-first__item--bookmarks"><a href="#">Закладки</a></li>
+          <li class="nav-first__item nav-first__item--basket"><a href="#">Корзина</a></li>
+          <li class="nav-first__item nav-first__item--checkout"><a href="#">Оформить заказ</a></li>
         </ul>
 
         <!-- Вторая строка навигации -->
@@ -71,33 +72,33 @@
         <div class="banner">
           <h3 class="banner__title">Материалы</h3>
           <p class="banner__text">на любой вкус</p>
-          <img class="banner__img" src="#" alt="Иконка для банера" />
+          <img class="banner__img" src="#" alt="Иконка для банера ведро" />
         </div>
         <div class="banner">
           <h3 class="banner__title">Инструмент</h3>
           <p class="banner__text">НА ВСЕ СЛУЧАИ</p>
-          <img class="banner__img" src="#" alt="Иконка для банера" />
+          <img class="banner__img" src="#" alt="Иконка для банера сверло" />
         </div>
         <div class="banner">
           <h3 class="banner__title">Техника</h3>
           <p class="banner__text">для стройки</p>
-          <img class="banner__img" src="#" alt="Иконка для банера" />
+          <img class="banner__img" src="#" alt="Иконка для банера трактор" />
         </div>
         <div class="banner-main">
           <h3 class="banner-main__title">Дрели</h3>
           <p class="banner-main__text">Соседям на радость!</p>
-          <a href="catalog.html" class="banner-main__link">ОТКРЫТЬ КАТАЛОГ</a>
+          <a href="catalog.html" class="banner-main__link button">ОТКРЫТЬ КАТАЛОГ</a>
         </div>
         <div class="banner-vertival_container">
           <div class="banner">
             <h3 class="banner__title">Скидки 50%</h3>
             <p class="banner__text">На 350 ТОВАРОВ</p>
-            <img class="banner__img" src="#" alt="Иконка для банера" />
+            <img class="banner__img" src="#" alt="Иконка для банера корзина" />
           </div>
           <div class="banner">
             <h3 class="banner__title">Доставка</h3>
             <p class="banner__text">бесплатно</p>
-            <img class="banner__img" src="#" alt="Иконка для банера" />
+            <img class="banner__img" src="#" alt="Иконка для банера грузовик" />
           </div>
         </div>
       </section>
@@ -105,7 +106,7 @@
       <!--Популярные товары-->
       <section class="popular-goods__container">
         <h2 class="popular-goods__title">Популярные товары:</h2>
-        <a href="#" class="popular-goods__link">все популярные товары</a>
+        <a href="#" class="popular-goods__link button">все популярные товары</a>
 
         <ul class="popular-goods__list">
           <li class="popular-goods__item">
@@ -165,7 +166,7 @@
       <!--Популярные производители-->
       <section class="manufacturer__container">
         <h2 class="manufacturer__title">Популярные производители:</h2>
-        <a href="#" class="manufacturer__link">все производители</a>
+        <a href="#" class="manufacturer__link button">все производители</a>
 
         <ul class="manufacturer__list">
           <li class="manufacturer__item">
@@ -264,7 +265,7 @@
             <li class="features_item">Автотрейдинг</li>
             <li class="features_item">ЖелДорЭкспедиция</li>
           </ul>
-          <a class="more_button" href="#">Подробнее о компании</a>
+          <a class="more_button button" href="#">Подробнее о компании</a>
         </section>
 
         <!--Контакты-->
@@ -280,16 +281,16 @@
             height="158"
             alt="Изображение карты"
           />
-          <button class="contacts_button" type="button">ЗАБЛУДИЛИСЬ? НАПИШИТЕ НАМ!</button>
+          <button class="contacts_button button" type="button">ЗАБЛУДИЛИСЬ? НАПИШИТЕ НАМ!</button>
         </section>
       </section>
     </main>
 
-    <footer>
+    <footer class="footer">
       <a class="logo__link" href="index.html">
         <img
           class="logo__img"
-          src="img/logo.png"
+          src="img/logo_bottom.png"
           width="138"
           height="23"
           alt="Логотип сайта ТЕХНОМАРТ"
@@ -364,13 +365,14 @@
       <textarea name="text" id="text-field" rows="7" cols="55">В свободной форме</textarea>
 
       <div class="feedback-popup__footer">
-        <button class="feedback-popup__submit" type="submit">Отправить</button>
+        <button class="feedback-popup__submit button" type="submit">Отправить</button>
       </div>
     </form>
 
     <!--Окно всплывающей карты-->
     <section class="map-popup">
       <button type="button">Закрыть</button>
+      <img src="img/big_map.png" width="940" height="447" alr="Расширенное изображение карты" />
     </section>
   </body>
 </html>
