@@ -69,36 +69,74 @@
 
       <!--Баннеры-->
       <section class="banners__container">
-        <div class="banner">
+        <div class="banner banner--materials">
           <h3 class="banner__title">Материалы</h3>
           <p class="banner__text">на любой вкус</p>
-          <img class="banner__img" src="#" alt="Иконка для банера ведро" />
+          <img
+            class="banner__img"
+            src="img/icon_b_1.png"
+            width="44"
+            height="65"
+            alt="Иконка для банера ведро"
+          />
         </div>
-        <div class="banner">
+        <div class="banner banner--tool">
           <h3 class="banner__title">Инструмент</h3>
           <p class="banner__text">НА ВСЕ СЛУЧАИ</p>
-          <img class="banner__img" src="#" alt="Иконка для банера сверло" />
+          <img
+            class="banner__img"
+            src="img/icon_b_2.png"
+            width="75"
+            height="61"
+            alt="Иконка для банера сверло"
+          />
         </div>
-        <div class="banner">
+        <div class="banner banner--technics">
           <h3 class="banner__title">Техника</h3>
           <p class="banner__text">для стройки</p>
-          <img class="banner__img" src="#" alt="Иконка для банера трактор" />
+          <img
+            class="banner__img"
+            src="img/icon_b_3.png"
+            width="78"
+            height="62"
+            alt="Иконка для банера трактор"
+          />
         </div>
-        <div class="banner-main">
-          <h3 class="banner-main__title">Дрели</h3>
-          <p class="banner-main__text">Соседям на радость!</p>
-          <a href="catalog.html" class="banner-main__link button">ОТКРЫТЬ КАТАЛОГ</a>
+        <!-- Главный баннер -->
+        <div class="banner-main__container">
+          <div class="banner-main banner-main--drills ">
+            <h3 class="banner-main__title">Дрели</h3>
+            <p class="banner-main__text">Соседям на радость!</p>
+            <a href="catalog.html" class="banner-main__link button">ОТКРЫТЬ КАТАЛОГ</a>
+          </div>
+          <div class="banner-main banner-main--rotary-hammers visually-hidden">
+            <h3 class="banner-main__title">Перфораторы</h3>
+            <p class="banner-main__text">Настоящие мужские игрушки</p>
+            <a href="catalog.html" class="banner-main__link button">ОТКРЫТЬ КАТАЛОГ</a>
+          </div>
         </div>
         <div class="banner-vertival_container">
-          <div class="banner">
+          <div class="banner banner--sale">
             <h3 class="banner__title">Скидки 50%</h3>
             <p class="banner__text">На 350 ТОВАРОВ</p>
-            <img class="banner__img" src="#" alt="Иконка для банера корзина" />
+            <img
+              class="banner__img"
+              src="img/icon_b_4.png"
+              width="59"
+              height="72"
+              alt="Иконка для банера корзина"
+            />
           </div>
-          <div class="banner">
+          <div class="banner banner--delivery">
             <h3 class="banner__title">Доставка</h3>
             <p class="banner__text">бесплатно</p>
-            <img class="banner__img" src="#" alt="Иконка для банера грузовик" />
+            <img
+              class="banner__img"
+              src="img/icon_b_5.png"
+              width="78"
+              height="63"
+              alt="Иконка для банера грузовик"
+            />
           </div>
         </div>
       </section>
@@ -119,7 +157,7 @@
             <h3 class="popular-goods__title">
               Перфоратор BOSCH BFG 9000
             </h3>
-            <p class="price__text--old">32500 Р.</p>
+            <p class="price-old__text">32500 Р.</p>
             <p class="price__text">25500 Р.</p>
           </li>
           <li class="popular-goods__item">
@@ -132,7 +170,7 @@
             <h3 class="popular-goods__title">
               Перфоратор BOSCH BFG 3000
             </h3>
-            <p class="price__text--old">22500 Р.</p>
+            <p class="price-old__text">22500 Р.</p>
             <p class="price__text">15500 Р.</p>
           </li>
           <li class="popular-goods__item">
@@ -145,7 +183,7 @@
             <h3 class="popular-goods__title">
               Перфоратор BOSCH BFG 6000
             </h3>
-            <p class="price__text--old">30500 Р.</p>
+            <p class="price-old__text">30500 Р.</p>
             <p class="price__text">25500 Р.</p>
           </li>
           <li class="popular-goods__item">
@@ -205,7 +243,7 @@
         </p>
         <ul class="services_buttons__list">
           <li class="services_buttons__item">
-            <button class="services__button services__button--delivery" type="button">
+            <button class="services__button services__button--delivery selected" type="button">
               Доставка
             </button>
           </li>
@@ -372,7 +410,6 @@
     <!--Окно всплывающей карты-->
     <section class="map-popup">
       <button type="button">Закрыть</button>
-      <img src="img/big_map.png" width="940" height="447" alr="Расширенное изображение карты" />
     </section>
   </body>
 </html>
