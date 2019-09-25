@@ -48,7 +48,6 @@ a {
 }
 .header {
   background-color: #f4f7f9;
-  background-image: url('../img/top_background.jpg');
 }
 .header li {
   list-style: none;
@@ -175,6 +174,9 @@ a {
 .banner-main--rotary-hammers {
   background: #000000 url('../img/mb_2.jpg') no-repeat;
 }
+.banner-main--rotary-hammers {
+  display: none;
+}
 .banner--sale {
   background-color: #8ed78f;
 }
@@ -183,7 +185,7 @@ a {
 }
 
 .banners__container {
-  font-family: 'Cuprum', sans-serif;
+  font-family: 'Cuprum', 'Arial', sans-serif;
 }
 .banner__title {
   color: #ffffff;
@@ -284,12 +286,12 @@ a {
   line-height: 30px;
   border: none;
 }
-.services__button.selected {
+.services__button--selected {
   box-shadow: 0 1px 0 #ffffff, inset 0 1px 0 #ffffff;
   background-color: #ffffff;
   color: #32425c;
 }
-.services__button:not(.selected):hover {
+.services__button:not(.services__button--selected):hover {
   box-shadow: 0 1px 0 #293449, inset 0 1px 0 #405069;
   background-color: #293449;
 }
@@ -495,7 +497,7 @@ a {
 }
 .popular-goods__title {
   color: #000000;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 20px;
@@ -518,7 +520,7 @@ a {
 }
 /* Сортировка */
 .sort {
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 13px;
   font-weight: 400;
   line-height: 18px;
@@ -534,9 +536,11 @@ a {
   background: transparent;
   border: none;
   text-transform: uppercase;
-}
-.sort__item:not(.sort__item--bottom):not(.sort__item--top) button {
   border-bottom: 2px dotted #ee3643;
+}
+.sort__item--bottom button,
+.sort__item--top button {
+  border-bottom: none;
 }
 .sort__item--bottom button::before {
   content: '▴';
@@ -570,7 +574,7 @@ a {
   background-color: #f2f6f8;
 }
 .about-good__title {
-  font-family: 'Cuprum', sans-serif;
+  font-family: 'Cuprum', 'Arial', sans-serif;
   font-size: 30px;
   font-weight: 400;
   line-height: 30px;
