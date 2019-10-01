@@ -4,7 +4,11 @@
     <meta charset="utf-8" />
     <title>HTML Academy: Техномарт</title>
     <link
-      href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i|PT+Sans:400,700&display=swap&subset=cyrillic"
+      href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i&display=swap&subset=cyrillic"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap&subset=cyrillic"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/normalize.css" />
@@ -218,7 +222,7 @@
                   </h3>
                   <p class="price__text">12500 Р.</p>
                 </li>
-                <li class="catalog-goods_item">
+                <li class="catalog-goods_item catalog-goods_item--new">
                   <img
                     src="img/perforator_1.jpg"
                     width="218"
@@ -307,10 +311,10 @@
         </div>
 
         <div class="second-pagination__container">
-          <p class="contacts__text">
-            <span class="contacts__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
+          <div class="contacts__text">
+            <p class="contacts__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
             <a class="contacts__tel" href="tel:+78125550555">+7 (812) 555-05-55</a>
-          </p>
+          </div>
           <ul class="pagination__list pagination__list--second">
             <li class="pagination__item"><a href="#">Материалы</a></li>
             <li class="pagination__item"><a href="#">Техника</a></li>
@@ -320,10 +324,10 @@
         </div>
       </div>
       <div class="container feedback__container">
-        <p class="rights__container">
-          <span>© 2010–2019 Компания «Техномарт»</span>
-          <span>Все права защищены</span>
-        </p>
+        <div class="rights__container">
+          <p>© 2010–2019 Компания «Техномарт»</p>
+          <p>Все права защищены</p>
+        </div>
         <ul class="socials__list">
           <li class="socials__item">
             <a href="#" aria-label="Техномарт во вконтакте">
@@ -354,6 +358,7 @@
 
     <!-- popup окно подтверждения добавления товара в корзину-->
     <section class="success-popup">
+      <h2 class="visually-hidden">Окно подтверждения добавления товара в корзину</h2>
       <button class="success-popup__button-close" type="button">Закрыть</button>
       <p class="success-popup__text">Товар добавлен в корзину!</p>
 

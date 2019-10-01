@@ -34,10 +34,15 @@ a {
   text-decoration: none;
 }
 .button {
-  background-color: #ee3643;
   text-transform: uppercase;
   color: #ffffff;
+  text-align: center;
+
+  background-color: #ee3643;
   border: none;
+  padding: 10px 0;
+  display: block;
+  border-radius: 2px;
 }
 .button:hover {
   background-color: #ca2c37;
@@ -258,8 +263,6 @@ a {
   box-shadow: inset 0 -5px 0 #293449;
   background-color: #32425c;
   flex-grow: 1;
-  flex-wrap: wrap;
-  display: flex;
 }
 .nav-pagination__item:hover {
   background-color: #293449;
@@ -358,7 +361,6 @@ a {
   padding-top: 20px;
   margin-bottom: 20px;
 }
-
 .banner-vertival_container {
   width: 32%;
 }
@@ -377,6 +379,9 @@ a {
   min-height: 266px;
   padding: 20px;
 }
+.banner-main__link {
+  width: 195px;
+}
 /* -about company */
 .sections__container {
   display: flex;
@@ -391,6 +396,13 @@ a {
 .contacts {
   width: 32%;
 }
+.more_button {
+  width: 220px;
+}
+.contacts_button {
+  width: 100%;
+  margin-top: 40px;
+}
 .features_title,
 .contacts_title,
 .services__title,
@@ -399,6 +411,7 @@ a {
   line-height: 30px;
   font-weight: 400;
 }
+
 .features_text,
 .contacts_text,
 .services-description__text {
@@ -406,17 +419,26 @@ a {
   line-height: 24px;
   font-size: 14px;
 }
+.features :nth-child(3) {
+  width: 80%;
+}
+.services-description--guarantee,
+.services-description--credit {
+  display: none;
+}
 .features_item {
   font-size: 18px;
-  line-height: 20px;
+  line-height: 38px;
 }
 .features .more_button,
 .contacts .contacts_button {
   font-size: 14px;
   line-height: 18px;
 }
+/* services */
 .services__container {
   background-color: #f2f6f8;
+  padding-top: 38px;
 }
 .services_buttons__item {
   list-style: none;
@@ -424,11 +446,17 @@ a {
 .services__button {
   box-shadow: 0 1px 0 #293449, inset 0 1px 0 #405069;
   background-color: #32425c;
+
   color: #ffffff;
   font-size: 21px;
   font-weight: 700;
   line-height: 30px;
+  text-align: left;
+
   border: none;
+  width: 240px;
+  padding: 15px 0 16px 0;
+  padding-left: 22px;
 }
 .services__button--selected {
   box-shadow: 0 1px 0 #ffffff, inset 0 1px 0 #ffffff;
@@ -439,6 +467,25 @@ a {
   box-shadow: 0 1px 0 #293449, inset 0 1px 0 #405069;
   background-color: #293449;
 }
+.services__switch-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.services_buttons__list {
+  padding: 0;
+  width: 20%;
+}
+.services-description {
+  width: 70%;
+}
+.services__text {
+  width: 46%;
+  font-size: 14px;
+  font-family: 'PT Sans', 'Arial', sans-serif;
+  line-height: 24px;
+}
+
 /* Breadcrumbs */
 .breadcrumbs__item {
   font-family: 'PT Sans', 'Arial', sans-serif;
@@ -550,6 +597,11 @@ a {
 .catalog-goods {
   width: 700px;
 }
+.catalog-goods,
+.popular-goods__container {
+  color: #000000;
+  font-family: 'PT Sans', 'Arial', sans-serif;
+}
 .catalog-goods_list {
   padding: 0;
   display: flex;
@@ -568,22 +620,48 @@ a {
   list-style: none;
   text-align: center;
 
-  width: 218px;
+  width: 220px;
   min-height: 318px;
-  margin-bottom: 21px;
+  margin-bottom: 20px;
+  position: relative;
 }
 
 .popular-goods__item:hover,
 .catalog-goods_item:hover {
   box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
 }
+.section__title-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f9f5f0;
+  align-items: center;
+  padding: 0 30px 0 24px;
+}
+.catalog-goods_item--new {
+  background: #ffffff url('../img/new_flag.png') 50% 50% no-repeat;
+  background-size: 200px;
+}
+.section__title {
+  color: #32425c;
+  text-transform: uppercase;
+  font-family: Cuprum;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 30px;
+}
+.manufacturer__link,
+.popular-goods__link {
+  width: 253px;
+}
+.catalog-goods__title,
 .popular-goods__title {
-  color: #000000;
-  font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 20px;
+  width: 80%;
+  margin: 6px auto 6px auto;
 }
+
 .price-old__text {
   color: #999999;
   font-size: 17px;
@@ -591,17 +669,25 @@ a {
   line-height: 18px;
   text-decoration: line-through;
   text-transform: uppercase;
-  margin-top: 0;
+  margin-top: 11px;
   margin-bottom: 13px;
 }
 .price__text {
   color: #ffffff;
+  background: url('../img/btn_copy_14.png') no-repeat;
+
   font-size: 17px;
   font-weight: 700;
-  line-height: 18px;
+  line-height: 38px;
   text-transform: uppercase;
-  background: url('../img/btn_copy_14.png') no-repeat;
-  margin-top: auto;
+
+  width: 141px;
+  min-height: 38px;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-48%);
 }
 /* -sort */
 .sort {
@@ -765,9 +851,10 @@ a {
   line-height: 18px;
   width: 288px;
 }
-.rights__container span,
-.contacts__text span {
-  display: block;
+
+.rights__container p,
+.contacts__text p {
+  margin: 0;
 }
 .socials__list {
   display: flex;
@@ -821,12 +908,19 @@ a {
 .feedback-popup__form input,
 .feedback-popup__form textarea {
   border: 2px solid #dee3e4;
+  padding: 13px 0 15px 16px;
 }
+.feedback-popup__form input {
+  padding: 7px 0 7px 16px;
+}
+
 .feedback-popup__form input::placeholder,
 .feedback-popup__form textarea {
   color: #a9a9a9;
   font-family: 'PT Sans', 'Arial', sans-serif;
+  font-size: 13px;
 }
+
 .success-popup {
   width: 620px;
   min-height: 282px;
@@ -847,6 +941,7 @@ a {
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+  width: 460px;
 }
 .feedback-popup__footer,
 .success-popup__footer {
@@ -865,6 +960,7 @@ a {
 textarea {
   width: 100%;
   min-height: 114px;
+  padding: 13px 0 0 16px;
 }
 .feedback-popup__main {
   margin: 0 80px;
@@ -891,8 +987,11 @@ textarea {
   color: #000000;
   font-size: 30px;
   font-weight: 400;
-  line-height: 30px;
+  line-height: 60px;
   text-align: center;
+  margin-bottom: 49px;
+  min-height: 66px;
+  margin-top: 18px;
 }
 .success-popup__link-checkout,
 .success-popup__button-continue {
@@ -900,11 +999,15 @@ textarea {
   font-weight: 400;
   line-height: 18px;
   text-transform: uppercase;
+  width: 220px;
 }
 .success-popup__button-continue {
   background-color: #ffffff;
   padding: 0;
   border: 0;
+  padding: 10px 0;
+  display: block;
+  border-radius: 2px;
 }
 .success-popup__button-continue {
   color: #000000;
