@@ -307,12 +307,16 @@ a {
 }
 .banners__container {
   font-family: 'Cuprum', 'Arial', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 59px;
 }
 .banner__title {
   color: #ffffff;
   font-size: 24px;
   font-weight: 700;
   line-height: 30px;
+  margin: 0;
 }
 .banner__text {
   background: rgba(0, 0, 0, 0.1);
@@ -321,6 +325,9 @@ a {
   font-weight: 400;
   line-height: 18px;
   text-transform: uppercase;
+  width: 135px;
+  padding: 10px 0;
+  text-align: center;
 }
 .banner__text:hover {
   background: rgba(0, 0, 0, 0.2);
@@ -334,6 +341,7 @@ a {
   font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
+  margin: 0;
 }
 .banner-main__text {
   color: #ffffff;
@@ -341,7 +349,30 @@ a {
   font-weight: 400;
   line-height: 24px;
 }
+.banner {
+  width: 300px;
+  min-height: 123px;
 
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+
+.banner-vertival_container {
+  width: 32%;
+}
+.banner-main__container-horizontal {
+  width: 66%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.banner-main {
+  width: 620px;
+  min-height: 266px;
+}
 /* -about company */
 .sections__container {
   display: flex;
