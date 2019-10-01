@@ -362,6 +362,9 @@ a {
 .banner-vertival_container {
   width: 32%;
 }
+.banner-main__container {
+  margin-bottom: 20px;
+}
 .banner-main__container-horizontal {
   width: 66%;
   display: flex;
@@ -372,6 +375,7 @@ a {
 .banner-main {
   width: 620px;
   min-height: 266px;
+  padding: 20px;
 }
 /* -about company */
 .sections__container {
@@ -500,9 +504,20 @@ a {
   border: 1px solid #e5e5e5;
   background-color: #ffffff;
 }
+.manufacturer__list {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 .manufacturer__item {
+  width: 200px;
+  min-height: 125px;
   border: 1px solid #e5e5e5;
   background-color: #ffffff;
+  list-style: none;
+  margin-bottom: 20px;
+  text-align: center;
 }
 .manufacturer__item:hover {
   box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
@@ -539,6 +554,11 @@ a {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+}
+.popular-goods__list {
+  padding: 0;
+  display: flex;
   justify-content: space-between;
 }
 .popular-goods__item,
