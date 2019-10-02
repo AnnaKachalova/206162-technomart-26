@@ -73,11 +73,11 @@
       </nav>
     </header>
     <main class="main">
-      <div class="container">
-        <h1 class="main__title visually-hidden">ТЕХНОМАРТ</h1>
+      <h1 class="main__title visually-hidden">ТЕХНОМАРТ</h1>
 
-        <!--Баннеры-->
-        <section class="banners__container">
+      <!--Баннеры-->
+      <section class="banners">
+        <div class="container">
           <div class="banner-main__container-horizontal">
             <div class="banner banner--materials">
               <div>
@@ -161,13 +161,15 @@
               />
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <!--Популярные товары-->
-        <section class="popular-goods__container">
+      <!--Популярные товары-->
+      <section class="popular-goods">
+        <div class="container">
           <div class="section__title-container">
             <h2 class="section__title">Популярные товары:</h2>
-            <a href="#" class="feedback__container button">все популярные товары</a>
+            <a href="#" class="popular-goods__link button">все популярные товары</a>
           </div>
           <ul class="popular-goods__list">
             <li class="popular-goods__item">
@@ -222,10 +224,12 @@
               <p class="price__text">12500 Р.</p>
             </li>
           </ul>
-        </section>
+        </div>
+      </section>
 
-        <!--Популярные производители-->
-        <section class="manufacturer__container">
+      <!--Популярные производители-->
+      <section class="manufacturers">
+        <div class="container">
           <div class="section__title-container">
             <h2 class="section__title">Популярные производители:</h2>
             <a href="#" class="manufacturer__link button">все производители</a>
@@ -257,102 +261,107 @@
               <img src="img/metabo.png" width="204" height="69" alt="Логотип metabo" />
             </li>
           </ul>
-        </section>
-      </div>
-      <!--Сервисы-->
-      <section class="services__container container">
-        <h2 class="services__title">Сервисы</h2>
-        <p class="services__text">
-          Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех
-          сил, чтобы сделать ваши покупки приятными.
-        </p>
-        <div class="services__switch-container">
-          <ul class="services_buttons__list">
-            <li class="services_buttons__item">
-              <button
-                class="services__button services__button--selected services__button--delivery"
-                type="button"
-              >
-                Доставка
-              </button>
-            </li>
-            <li class="services_buttons__item">
-              <button class="services__button services__button--guarantee" type="button">
-                Гарантия
-              </button>
-            </li>
-            <li class="services_buttons__item">
-              <button class="services__button services__button--credit" type="button">
-                Кредит
-              </button>
-            </li>
-          </ul>
+        </div>
+      </section>
 
-          <div class="services-description services-description--delivery">
-            <div>
-              <h2 class="services-description__title">Доставка</h2>
-              <p class="services-description__text">
-                Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
-                Ведь мы неплохо заработаем, поднимая его на ваш этаж!
-              </p>
+      <!--Сервисы-->
+      <section class="services">
+        <div class="container">
+          <h2 class="services__title">Сервисы</h2>
+          <p class="services__text">
+            Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех
+            сил, чтобы сделать ваши покупки приятными.
+          </p>
+          <div class="services__switch-container">
+            <ul class="services_buttons__list">
+              <li class="services_buttons__item">
+                <button
+                  class="services__button services__button--selected services__button--delivery"
+                  type="button"
+                >
+                  Доставка
+                </button>
+              </li>
+              <li class="services_buttons__item">
+                <button class="services__button services__button--guarantee" type="button">
+                  Гарантия
+                </button>
+              </li>
+              <li class="services_buttons__item">
+                <button class="services__button services__button--credit" type="button">
+                  Кредит
+                </button>
+              </li>
+            </ul>
+
+            <div class="services-description services-description--delivery">
+              <div>
+                <h2 class="services-description__title">Доставка</h2>
+                <p class="services-description__text">
+                  Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно
+                  бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!
+                </p>
+              </div>
+              <img src="img/truck.png" width="468" height="261" alt="Изображение грузовика" />
             </div>
-            <img src="img/truck.png" width="468" height="261" alt="Изображение грузовика" />
-          </div>
-          <div class="services-description services-description--guarantee">
-            <h2 class="services-description__title">Гарантия</h2>
-            <p class="services-description__text">
-              Если купленный у нас товар поломается или заискрит, а также в случае пожара,
-              спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы
-              обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.
-            </p>
-            <img src="img/medal.png" width="389" height="283" alt="Изображение медали" />
-          </div>
-          <div class="services-description services-description--credit">
-            <h2 class="services-description__title">Кредит</h2>
-            <p class="services-description__text">
-              Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.
-            </p>
-            <img src="img/credit.png" width="465" height="285" alt="Изображение денег" />
+            <div class="services-description services-description--guarantee">
+              <h2 class="services-description__title">Гарантия</h2>
+              <p class="services-description__text">
+                Если купленный у нас товар поломается или заискрит, а также в случае пожара,
+                спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии.
+                Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.
+              </p>
+              <img src="img/medal.png" width="389" height="283" alt="Изображение медали" />
+            </div>
+            <div class="services-description services-description--credit">
+              <h2 class="services-description__title">Кредит</h2>
+              <p class="services-description__text">
+                Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.
+              </p>
+              <img src="img/credit.png" width="465" height="285" alt="Изображение денег" />
+            </div>
           </div>
         </div>
       </section>
 
       <!--О компании-->
-      <section class="sections__container container">
-        <h2 class="visually-hidden">О Компании</h2>
-        <section class="features">
-          <h3 class="features_title">КОМПАНИЯ «ТЕХНОМАРТ»</h3>
-          <p class="features_text">
-            Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и
-            строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
-          </p>
-          <p class="features_text">
-            Мы можем доставить ваш товар в самые отдаленные точки России! Техномарт работает со
-            многими транспортными компаниями:
-          </p>
-          <ul class="features_list">
-            <li class="features_item">Деловые линии</li>
-            <li class="features_item">Автотрейдинг</li>
-            <li class="features_item">ЖелДорЭкспедиция</li>
-          </ul>
-          <a class="more_button button" href="#">Подробнее о компании</a>
-        </section>
+      <section class="about-us">
+        <div class="container">
+          <h2 class="visually-hidden">О Компании</h2>
+          <section class="features">
+            <h3 class="features_title">КОМПАНИЯ «ТЕХНОМАРТ»</h3>
+            <p class="features_text">
+              Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и
+              строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
+            </p>
+            <p class="features_text">
+              Мы можем доставить ваш товар в самые отдаленные точки России! Техномарт работает со
+              многими транспортными компаниями:
+            </p>
+            <ul class="features_list">
+              <li class="features_item">Деловые линии</li>
+              <li class="features_item">Автотрейдинг</li>
+              <li class="features_item">ЖелДорЭкспедиция</li>
+            </ul>
+            <a class="more_button button" href="#">Подробнее о компании</a>
+          </section>
 
-        <!--Контакты-->
-        <section class="contacts">
-          <h2 class="contacts_title">Контакты</h2>
-          <p class="contacts_text">
-            Вы можете забрать товар сами, заехав в наш офис:
-          </p>
-          <img
-            class="contacts_img"
-            src="img/map.jpg"
-            width="300"
-            height="158"
-            alt="Изображение карты"
-          />
-          <button class="contacts_button button" type="button">ЗАБЛУДИЛИСЬ? НАПИШИТЕ НАМ!</button>
-        </section>
+          <!--Контакты-->
+          <section class="contacts">
+            <h2 class="contacts_title">Контакты</h2>
+            <p class="contacts_text">
+              Вы можете забрать товар сами, заехав в наш офис:
+            </p>
+            <img
+              class="contacts_img"
+              src="img/map.jpg"
+              width="300"
+              height="158"
+              alt="Изображение карты"
+            />
+            <button class="contacts_button button" type="button">ЗАБЛУДИЛИСЬ? НАПИШИТЕ НАМ!</button>
+          </section>
+        </div>
       </section>
     </main>
     <footer class="footer">

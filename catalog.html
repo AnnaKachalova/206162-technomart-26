@@ -75,17 +75,20 @@
     </header>
 
     <main class="main">
-      <div class="container">
-        <h1 class="main__title visually-hidden">ТЕХНОМАРТ</h1>
-        <section class="breadcrumbs">
+      <h1 class="main__title visually-hidden">ТЕХНОМАРТ</h1>
+      <section class="breadcrumbs">
+        <div class="container">
           <ul class="breadcrumbs__list">
             <li class="breadcrumbs__item"><a href="#">Каталог</a></li>
             <li class="breadcrumbs__item"><a href="#">Инструмент</a></li>
             <li class="breadcrumbs__item"><a href="#">Перфораторы</a></li>
           </ul>
           <h2 class="catalog_title">ПЕРФОРАТОРЫ</h2>
-        </section>
-        <div class="content_container">
+        </div>
+      </section>
+
+      <section class="content">
+        <div class="container">
           <aside class="filters">
             <h3 class="filters__title">ФИЛЬТР:</h3>
             <form action="https://echo.htmlacademy.ru" method="POST" class="form_filters">
@@ -127,6 +130,7 @@
               <input type="submit" value="Показать" class="filters__button" />
             </form>
           </aside>
+
           <div class="right_container">
             <!--Панель сортировки товаров-->
             <section class="sort">
@@ -143,6 +147,7 @@
                 </li>
               </ul>
             </section>
+
             <!--Каталог товаров-->
             <section class="catalog-goods">
               <ul class="catalog-goods_list">
@@ -261,20 +266,21 @@
                   <p class="price__text">12500 Р.</p>
                 </li>
               </ul>
-              <!--Страницы-->
-              <section class="pages">
-                <h2 class="visually-hidden">Страницы навигации</h2>
-                <ul class="pages__list">
-                  <li class="pages__item"><button type="button">1</button></li>
-                  <li class="pages__item"><button type="button">2</button></li>
-                  <li class="pages__item"><button type="button">3</button></li>
-                  <li class="pages__item"><button type="button">СЛЕДУЮЩАЯ</button></li>
-                </ul>
-              </section>
+            </section>
+            <!--Страницы-->
+            <section class="pages">
+              <h2 class="visually-hidden">Страницы навигации</h2>
+              <ul class="pages__list">
+                <li class="pages__item"><button type="button">1</button></li>
+                <li class="pages__item"><button type="button">2</button></li>
+                <li class="pages__item"><button type="button">3</button></li>
+                <li class="pages__item"><button type="button">СЛЕДУЮЩАЯ</button></li>
+              </ul>
             </section>
           </div>
         </div>
-      </div>
+      </section>
+
       <!--О товаре-->
       <section class="about-good">
         <div class="container">
