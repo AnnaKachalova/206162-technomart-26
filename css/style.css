@@ -145,8 +145,7 @@ a {
 .nav-first__item--search {
   position: relative;
 }
-.nav-first__item--search::before {
-  content: '';
+.search__button--icon {
   width: 17px;
   height: 17px;
   position: absolute;
@@ -155,6 +154,9 @@ a {
   top: 12px;
   opacity: 0.3;
   z-index: 100;
+}
+.search__button:focus + label {
+  background-image: url('../img/icon-search-red.svg');
 }
 
 /* --bookmarks, basket */
