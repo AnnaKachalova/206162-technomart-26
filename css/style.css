@@ -810,15 +810,11 @@ input[type='radio']:checked + label:before {
   margin-bottom: 20px;
   text-align: center;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.manufacturer__item img {
-  margin: auto;
-  top: 0;
-  bottom: 0;
-  position: absolute;
-  left: 0;
-  right: 0;
-}
+
 .manufacturer__item:hover {
   box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
 }
