@@ -157,6 +157,7 @@ a {
 }
 .search__button:focus + label {
   background-image: url('../img/icon-search-red.svg');
+  opacity: 1;
 }
 
 /* --bookmarks, basket */
