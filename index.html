@@ -30,10 +30,10 @@
           </a>
           <ul class="nav-first__list">
             <li class="nav-first__item nav-first__item--search">
-              <button class="search__button" type="button">Поиск</button>
+              <button class="search__button" type="button">Поиск:</button>
             </li>
-            <li class="nav-first__item nav-first__item--bookmarks"><a href="#">Закладки</a></li>
-            <li class="nav-first__item nav-first__item--basket"><a href="#">Корзина</a></li>
+            <li class="nav-first__item nav-first__item--bookmarks"><a href="#">Закладки: 0</a></li>
+            <li class="nav-first__item nav-first__item--basket"><a href="#">Корзина: 0</a></li>
             <li class="nav-first__item nav-first__item--checkout">
               <a href="#">Оформить заказ</a>
             </li>
@@ -45,7 +45,7 @@
           <ul class="nav-second__list">
             <li class="nav-second__item">
               <p class="nav-second__text">
-                Интернет-магазин строительных материалов и инструментов для ремонта
+                Интернет-магазин строительных материалов &nbsp; и инструментов для ремонта
               </p>
             </li>
             <li class="nav-second__item">
@@ -299,7 +299,8 @@
                 <h2 class="services-description__title">Доставка</h2>
                 <p class="services-description__text">
                   Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно
-                  бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!
+                  бесплатно! Ведь мы неплохо заработаем,<br />
+                  поднимая его на ваш этаж!
                 </p>
               </div>
               <img src="img/truck.png" width="468" height="261" alt="Изображение грузовика" />
@@ -435,7 +436,11 @@
     <section class="feedback-popup">
       <h2 class="visually-hidden">Форма обратной связи</h2>
       <form action="https://echo.htmlacademy.ru" method="POST" class="feedback-popup__form">
-        <button class="feedback-popup__button-close" type="button">Закрыть</button>
+        <button
+          class="feedback-popup__button-close"
+          type="button"
+          aria-label="Закрыть окно"
+        ></button>
 
         <div class="feedback-popup__header">
           <p>
@@ -466,7 +471,7 @@
     <!--Окно всплывающей карты-->
     <section class="map-popup">
       <h2 class="visually-hidden">Окно всплывающей карты</h2>
-      <button type="button">Закрыть</button>
+      <button class="map-popup__button-close" type="button" aria-label="Закрыть окно"></button>
     </section>
   </body>
 </html>

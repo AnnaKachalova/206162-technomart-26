@@ -30,10 +30,12 @@
           </a>
           <ul class="nav-first__list">
             <li class="nav-first__item nav-first__item--search">
-              <button class="search__button" type="button">Поиск</button>
+              <button class="search__button" type="button">Поиск:</button>
             </li>
-            <li class="nav-first__item nav-first__item--bookmarks"><a href="#">Закладки</a></li>
-            <li class="nav-first__item nav-first__item--basket"><a href="#">Корзина</a></li>
+            <li class="nav-first__item nav-first__item--bookmarks"><a href="#">Закладки: 0</a></li>
+            <li class="nav-first__item nav-first__item--basket nav-first__item--basket-not-empty">
+              <a href="#">Корзина: 10</a>
+            </li>
             <li class="nav-first__item nav-first__item--checkout">
               <a href="#">Оформить заказ</a>
             </li>
@@ -45,7 +47,7 @@
           <ul class="nav-second__list">
             <li class="nav-second__item">
               <p class="nav-second__text">
-                Интернет-магазин строительных материалов и инструментов для ремонта
+                Интернет-магазин строительных материалов &nbsp; и инструментов для ремонта
               </p>
             </li>
             <li class="nav-second__item">
@@ -79,7 +81,10 @@
       <section class="breadcrumbs">
         <div class="container">
           <ul class="breadcrumbs__list">
-            <li class="breadcrumbs__item"><a href="#">Каталог</a></li>
+            <li class="breadcrumbs__item breadcrumbs__item--home">
+              <a href="index.html" aria-label="На главную"></a>
+            </li>
+            <li class="breadcrumbs__item"><a href="catalog.html">Каталог</a></li>
             <li class="breadcrumbs__item"><a href="#">Инструмент</a></li>
             <li class="breadcrumbs__item"><a href="#">Перфораторы</a></li>
           </ul>
@@ -88,6 +93,7 @@
       </section>
 
       <section class="content">
+        <h2 class="visually-hidden">Каталог перфораторов</h2>
         <div class="container">
           <aside class="filters">
             <h3 class="filters__title">ФИЛЬТР:</h3>
@@ -365,7 +371,7 @@
     <!-- popup окно подтверждения добавления товара в корзину-->
     <section class="success-popup">
       <h2 class="visually-hidden">Окно подтверждения добавления товара в корзину</h2>
-      <button class="success-popup__button-close" type="button">Закрыть</button>
+      <button class="success-popup__button-close" type="button" aria-label="Закрыть окно"></button>
       <p class="success-popup__text">Товар добавлен в корзину!</p>
 
       <div class="success-popup__footer">
