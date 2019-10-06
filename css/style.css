@@ -403,7 +403,14 @@ a {
 .nav-pagination__item:active a {
   opacity: 0.5;
 }
-
+.nav-pagination__item:first-child {
+  padding-left: 22px;
+  padding-right: 3px;
+}
+.nav-pagination__item:last-child {
+  padding-right: 23px;
+  padding-left: 4px;
+}
 /* Main */
 /* -banners */
 .banner--materials {
@@ -485,7 +492,26 @@ a {
   margin-bottom: 20px;
   padding-left: 23px;
 }
-
+.banner--materials img {
+  margin-left: 53px;
+  margin-top: 10px;
+}
+.banner--tool img {
+  margin-left: 37px;
+  margin-top: 12px;
+}
+.banner--technics img {
+  margin-left: 32px;
+  margin-top: 10px;
+}
+.banner--sale img {
+  margin-left: 37px;
+  margin-top: 5px;
+}
+.banner--delivery img {
+  margin-left: 32px;
+  margin-top: 11px;
+}
 .banner-vertical_container {
   width: 32%;
 }
@@ -999,6 +1025,10 @@ input[type='radio']:checked + label:before {
   color: #ee3643;
 }
 /* -pages */
+.pages {
+  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-size: 13px;
+}
 .pages__list {
   padding: 0;
   display: flex;
@@ -1008,9 +1038,16 @@ input[type='radio']:checked + label:before {
   margin-right: 10px;
 }
 .pages__item button {
+  border-radius: 2px;
   border: 1px solid #e5e5e5;
   background-color: #ffffff;
   padding: 12px 17px 12px 17px;
+  font-family: inherit;
+}
+.pages__item--selected button {
+  background-color: #ee3643;
+  border: 1px solid #ee3643;
+  color: #ffffff;
 }
 .pages__item button:hover {
   border: 1px solid #bdc6ca;
@@ -1156,6 +1193,15 @@ input[type='radio']:checked + label:before {
 }
 
 /* Form feedback */
+.feedback-popup {
+  position: fixed;
+  top: 120px;
+  left: 50%;
+  background: white;
+  margin-left: -310px;
+  z-index: 100;
+  display: none;
+}
 .feedback-popup__form {
   width: 620px;
   min-height: 430px;
@@ -1182,9 +1228,15 @@ input[type='radio']:checked + label:before {
 }
 
 .success-popup {
+  background: white;
   width: 620px;
   min-height: 282px;
-  position: relative;
+  position: fixed;
+  top: 120px;
+  left: 50%;
+  margin-left: -320px;
+  z-index: 100;
+  display: none;
 }
 .feedback-popup__form,
 .success-popup {
@@ -1262,7 +1314,13 @@ textarea {
   background-image: url('../img/big_map.png');
   width: 940px;
   min-height: 447px;
-  position: relative;
+
+  position: fixed;
+  top: 120px;
+  left: 50%;
+  margin-left: -470px;
+  z-index: 99;
+  display: none;
 }
 
 /* popup window */
