@@ -80,7 +80,7 @@
       <section class="banners">
         <div class="container">
           <div class="banner-main__container-horizontal">
-            <div class="banner banner--materials">
+            <div class="banner banner--materials item__new">
               <div>
                 <h3 class="banner__title">Материалы</h3>
                 <p class="banner__text">на любой вкус</p>
@@ -109,16 +109,19 @@
             </div>
             <!-- Главный баннер -->
             <div class="banner-main__container">
-              <div class="banner-main banner-main--drills ">
-                <h3 class="banner-main__title">Дрели</h3>
-                <p class="banner-main__text">Соседям на радость!</p>
-                <a href="catalog.html" class="banner-main__link button">ОТКРЫТЬ КАТАЛОГ</a>
-              </div>
+              <div class="banner-main__before"></div>
+
               <div class="banner-main banner-main--rotary-hammers">
                 <h3 class="banner-main__title">Перфораторы</h3>
                 <p class="banner-main__text">Настоящие мужские игрушки</p>
                 <a href="catalog.html" class="banner-main__link button">ОТКРЫТЬ КАТАЛОГ</a>
               </div>
+              <div class="banner-main banner-main--drills ">
+                <h3 class="banner-main__title">Дрели</h3>
+                <p class="banner-main__text">Соседям на радость!</p>
+                <a href="catalog.html" class="banner-main__link button">ОТКРЫТЬ КАТАЛОГ</a>
+              </div>
+              <div class="banner-main__after"></div>
             </div>
           </div>
 
@@ -213,7 +216,7 @@
               <p class="price-old__text">30500 Р.</p>
               <p class="price__text">25500 Р.</p>
             </li>
-            <li class="popular-goods__item">
+            <li class="popular-goods__item  item__new">
               <img
                 src="img/perforator_4_1.jpg"
                 width="218"
@@ -308,19 +311,23 @@
               <img src="img/truck.png" width="468" height="261" alt="Изображение грузовика" />
             </div>
             <div class="services-description services-description--guarantee">
-              <h2 class="services-description__title">Гарантия</h2>
-              <p class="services-description__text">
-                Если купленный у нас товар поломается или заискрит, а также в случае пожара,
-                спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии.
-                Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.
-              </p>
+              <div>
+                <h2 class="services-description__title">Гарантия</h2>
+                <p class="services-description__text">
+                  Если купленный у нас товар поломается или заискрит, а также в случае пожара,
+                  спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии.
+                  Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.
+                </p>
+              </div>
               <img src="img/medal.png" width="389" height="283" alt="Изображение медали" />
             </div>
             <div class="services-description services-description--credit">
-              <h2 class="services-description__title">Кредит</h2>
-              <p class="services-description__text">
-                Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.
-              </p>
+              <div>
+                <h2 class="services-description__title">Кредит</h2>
+                <p class="services-description__text">
+                  Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.
+                </p>
+              </div>
               <img src="img/credit.png" width="465" height="285" alt="Изображение денег" />
             </div>
           </div>
@@ -429,7 +436,7 @@
         </p>
         <p class="autor">
           Разработано —<br />
-          <a class="autor__link" href="htmlacademy.ru">htmlacademy.ru</a>
+          <a class="autor__link" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
         </p>
       </div>
     </footer>
@@ -475,5 +482,8 @@
       <h2 class="visually-hidden">Окно всплывающей карты</h2>
       <button class="map-popup__button-close" type="button" aria-label="Закрыть окно"></button>
     </section>
+    <script src="js/services.js"></script>
+    <script src="js/banners.js"></script>
+    <script src="js/popups.js"></script>
   </body>
 </html>

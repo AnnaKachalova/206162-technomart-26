@@ -51,7 +51,8 @@ a {
   background-color: #ba2732;
 }
 .container {
-  padding: 0 130px;
+  max-width: 940px;
+  margin: 0 auto;
 }
 
 /* Header */
@@ -233,6 +234,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  flex-wrap: wrap;
 }
 .nav-second__text {
   color: #ee3643;
@@ -428,9 +430,6 @@ a {
 .banner-main--rotary-hammers {
   background: #000000 url('../img/mb_2.jpg') no-repeat;
 }
-.banner-main--rotary-hammers {
-  display: none;
-}
 .banner--sale {
   background-color: #8ed78f;
 }
@@ -491,6 +490,7 @@ a {
   padding-top: 20px;
   margin-bottom: 20px;
   padding-left: 23px;
+  position: relative;
 }
 .banner--materials img {
   margin-left: 53px;
@@ -518,9 +518,11 @@ a {
 .banner-main__container {
   margin-bottom: 20px;
   position: relative;
+  width: 619px;
+  min-height: 265px;
+  overflow: hidden;
 }
-.banner-main__container::before {
-  content: '';
+.banner-main__before {
   width: 22px;
   height: 40px;
   position: absolute;
@@ -528,9 +530,9 @@ a {
   background-image: url('../img/icon-left.svg');
   left: 25px;
   top: 114px;
+  z-index: 100;
 }
-.banner-main__container::after {
-  content: '';
+.banner-main__after {
   width: 22px;
   height: 40px;
   position: absolute;
@@ -538,6 +540,7 @@ a {
   background-image: url('../img/icon-right.svg');
   right: 25px;
   top: 114px;
+  z-index: 100;
 }
 .banner-main__container-horizontal {
   width: 66%;
@@ -550,6 +553,9 @@ a {
   width: 620px;
   min-height: 266px;
   padding: 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 .banner-main__link {
   width: 195px;
@@ -682,7 +688,7 @@ a {
 .services__switch-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 .services_buttons__list {
   padding: 0;
@@ -907,11 +913,97 @@ input[type='radio']:checked + label:before {
   margin-bottom: 20px;
   position: relative;
 }
-
+.item__new::before {
+  content: '';
+  background-image: url('../img/new_flag.png');
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 60px;
+  height: 59px;
+}
+.popular-goods__item.item__new::before,
+.catalog-goods_item.item__new::before {
+  right: -1px;
+  top: -1px;
+}
 .popular-goods__item:hover,
 .catalog-goods_item:hover {
   box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
 }
+
+.catalog-goods_item:hover .catalog-goods_buttons--block {
+  display: block;
+}
+.catalog-goods_item:hover img {
+  display: none;
+}
+.catalog-goods_buttons--block {
+  display: none;
+  min-height: 173px;
+  padding: 44px 0 31px 0;
+}
+/*--Кнопки на карточке*/
+.catalog-goods_button--buy {
+  box-shadow: inset 0 -3px 0 #367315;
+  background-color: #63a63e;
+  border: none;
+  border-radius: 3px;
+  width: 135px;
+  padding: 11px 0;
+  position: relative;
+
+  color: #ffffff;
+  font-family: 'Cuprum', 'Arial', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.catalog-goods_button--buy::before {
+  content: '';
+  width: 14px;
+  height: 16px;
+  position: absolute;
+
+  background: url('../img/icon-cart.svg') no-repeat;
+
+  left: 12px;
+  top: 10px;
+  opacity: 0.3;
+}
+.catalog-goods_button--buy:hover {
+  background-color: #5fbb2d;
+}
+.catalog-goods_button--buy:active {
+  background-color: #518534;
+}
+.catalog-goods_button--buy:hover::before,
+.catalog-goods_button--buy:active::before {
+  opacity: 1;
+}
+.catalog-goods_button--to-bookmarks {
+  width: 135px;
+  border: 3px solid #63a63e;
+  border-radius: 3px;
+  padding: 9px 0;
+  margin-top: 7px;
+  background-color: #ffffff;
+
+  color: #32425c;
+  font-family: 'Cuprum', 'Arial', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.catalog-goods_button--to-bookmarks:hover {
+  border: 3px solid #32425c;
+}
+.catalog-goods_button--to-bookmarks:active {
+  border: 3px solid #32425c;
+  opacity: 0.3;
+}
+
 .section__title-container {
   display: flex;
   justify-content: space-between;
@@ -919,10 +1011,7 @@ input[type='radio']:checked + label:before {
   align-items: center;
   padding: 5px 24px 4px 29px;
 }
-.catalog-goods_item--new {
-  background: #ffffff url('../img/new_flag.png') 50% 50% no-repeat;
-  background-size: 200px;
-}
+
 .section__title {
   color: #32425c;
   text-transform: uppercase;
@@ -1091,6 +1180,7 @@ input[type='radio']:checked + label:before {
   align-items: flex-end;
   justify-content: space-between;
   padding: 0;
+  flex-wrap: wrap;
 }
 .pagination__item {
   font-size: 18px;
@@ -1319,7 +1409,7 @@ textarea {
   top: 120px;
   left: 50%;
   margin-left: -470px;
-  z-index: 99;
+  z-index: 101;
   display: none;
 }
 
