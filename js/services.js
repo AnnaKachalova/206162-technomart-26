@@ -2,8 +2,8 @@
   // Переключение сервисов
   let servicesButtons = document.querySelectorAll('.services__button');
   let servicesDescription = document.querySelectorAll('.services-description');
-  let services = Array.from(servicesButtons);
-  let descriptions = Array.from(servicesDescription);
+  let descriptions = Array.prototype.slice.call(servicesDescription, 0);
+  let services = Array.prototype.slice.call(servicesButtons, 0);
 
   let changeServiceDescription = function(evt) {
     descriptions.forEach(function(description, i) {

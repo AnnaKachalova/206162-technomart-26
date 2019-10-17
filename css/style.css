@@ -362,6 +362,7 @@ a {
   left: -20px;
   top: 2px;
   font-size: 36px;
+  text-decoration: none;
 }
 
 .orders__link:hover,
@@ -898,7 +899,7 @@ fieldset {
   text-align: center;
 }
 .min-range-value + span {
-  margin: 0 3px;
+  margin: 0 2px;
 }
 .range-values {
   margin-top: 9px;
@@ -931,8 +932,8 @@ input[type='checkbox'] + label:before {
   display: inline-block;
   margin-right: 6px;
   position: relative;
-  width: 27px;
-  height: 23px;
+  width: 29px;
+  height: 25px;
   background-image: url('../img/checkbox-off.svg');
   background-repeat: no-repeat;
   vertical-align: middle;
@@ -949,9 +950,10 @@ input[type='radio'] + label:before {
   display: inline-block;
   margin-right: 7px;
   position: relative;
-  width: 25px;
-  height: 25px;
+  width: 27px;
+  height: 27px;
   background-image: url('../img/radio-off.svg');
+  background-repeat: no-repeat;
   vertical-align: middle;
 }
 input[type='radio']:checked + label:before {

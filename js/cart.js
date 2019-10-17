@@ -1,7 +1,7 @@
 (function() {
   // Добавление в карзину
   const buttonsBuy = document.querySelectorAll('.catalog-goods_button--buy');
-  const buttonsBuyArray = Array.from(buttonsBuy);
+  const buttonsBuyArray = Array.prototype.slice.call(buttonsBuy, 0);
   const popupSuccess = document.querySelector('.success-popup');
   const popupSuccessButtonClose = popupSuccess.querySelector('.success-popup__button-close');
   const popupSuccessButtonContinue = popupSuccess.querySelector('.success-popup__button-continue');
