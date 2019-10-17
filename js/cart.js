@@ -53,6 +53,7 @@
   // Клик закладки
   let bookmarkCounter = 0;
   const buttonsBookmark = document.querySelectorAll('.catalog-goods_button--to-bookmarks');
+  const buttonsBookmarkArray = Array.prototype.slice.call(buttonsBookmark, 0);
   const bookmarks = document.querySelector('.nav-first__item--bookmarks');
   const bookmarksCount = bookmarks.querySelector('.bookmarks-count');
 
@@ -63,7 +64,7 @@
     bookmarksCount.textContent = bookmarkCounter;
   };
 
-  buttonsBookmark.forEach(function(button) {
+  buttonsBookmarkArray.forEach(function(button) {
     button.addEventListener('click', onButtonBookmark);
   });
 })();

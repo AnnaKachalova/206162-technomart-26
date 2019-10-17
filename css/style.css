@@ -1598,7 +1598,8 @@ textarea {
 }
 
 .success-popup__footer {
-  justify-content: space-evenly;
+  justify-content: space-around;
+  padding: 37px 0;
 }
 .success-popup__button-close,
 .feedback-popup__button-close,
