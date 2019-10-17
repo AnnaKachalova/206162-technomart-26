@@ -18,27 +18,31 @@
     <header class="header">
       <nav class="nav">
         <!-- Первая строка навигации -->
-        <div class="nav-first__container container">
-          <a class="logo__link" href="index.html">
-            <img
-              class="logo__img"
-              src="img/logo.png"
-              width="109"
-              height="19"
-              alt="Логотип сайта ТЕХНОМАРТ"
-            />
-          </a>
-          <ul class="nav-first__list">
-            <li class="nav-first__item nav-first__item--search">
-              <input type="text" class="search__button" placeholder="Поиск:" />
-              <label class="search__button--icon"></label>
-            </li>
-            <li class="nav-first__item nav-first__item--bookmarks"><a href="#">Закладки: 0</a></li>
-            <li class="nav-first__item nav-first__item--basket"><a href="#">Корзина: 0</a></li>
-            <li class="nav-first__item nav-first__item--checkout">
-              <a href="#">Оформить заказ</a>
-            </li>
-          </ul>
+        <div class="nav-first__container">
+          <div class="container">
+            <a class="logo__link" href="index.html">
+              <img
+                class="logo__img"
+                src="img/logo.png"
+                width="109"
+                height="19"
+                alt="Логотип сайта ТЕХНОМАРТ"
+              />
+            </a>
+            <ul class="nav-first__list">
+              <li class="nav-first__item nav-first__item--search">
+                <input type="text" class="search__button" placeholder="Поиск:" />
+                <label class="search__button--icon"></label>
+              </li>
+              <li class="nav-first__item nav-first__item--bookmarks">
+                <a href="#">Закладки: 0</a>
+              </li>
+              <li class="nav-first__item nav-first__item--basket"><a href="#">Корзина: 0</a></li>
+              <li class="nav-first__item nav-first__item--checkout">
+                <a href="#">Оформить заказ</a>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <!-- Вторая строка навигации -->
@@ -298,7 +302,7 @@
                 </button>
               </li>
             </ul>
-
+            <div class="shadow"></div>
             <div class="services-description services-description--delivery">
               <div>
                 <h2 class="services-description__title">Доставка</h2>
@@ -314,10 +318,11 @@
               <div>
                 <h2 class="services-description__title">Гарантия</h2>
                 <p class="services-description__text">
-                  Если купленный у нас товар поломается или заискрит, а также в случае пожара,
-                  спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии.
-                  Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.
+                  Если купленный у нас товар поломается или заискрит,<br />
+                  а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть
+                  уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.
                 </p>
+                <p class="services-description__text">Дом уж восстановите как-нибудь сами.</p>
               </div>
               <img src="img/medal.png" width="389" height="283" alt="Изображение медали" />
             </div>
@@ -408,36 +413,40 @@
           </ul>
         </div>
       </div>
-      <div class="container feedback__container">
-        <div class="rights__container">
-          <p>© 2010–2019 Компания «Техномарт»</p>
-          <p>Все права защищены</p>
+      <div class="feedback__container">
+        <div class="container">
+          <div class="rights__container">
+            <p>© 2010–2019 Компания «Техномарт»</p>
+            <p>Все права защищены</p>
+          </div>
+          <ul class="socials__list">
+            <li class="socials__item">
+              <a href="#" aria-label="Техномарт во вконтакте">
+                <img src="img/vk-icon.svg" width="26" height="15" alt="Вконтакте" />
+              </a>
+            </li>
+            <li class="socials__item">
+              <a href="#" aria-label="Техномарт в фейсбуке">
+                <img src="img/fb-icon.svg" width="12" height="22" alt="Фейсбук" />
+              </a>
+            </li>
+            <li class="socials__item">
+              <a href="#" aria-label="Техномарт в инстаграме">
+                <img src="img/insta-icon.svg" width="21" height="21" alt="Инстаграм" />
+              </a>
+            </li>
+          </ul>
+          <p class="feedback">
+            Обратная связь:<br />
+            <a class="feedback__link" href="mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </p>
+          <p class="autor">
+            Разработано —<br />
+            <a class="autor__link" href="https://htmlacademy.ru/intensive/htmlcss"
+              >htmlacademy.ru</a
+            >
+          </p>
         </div>
-        <ul class="socials__list">
-          <li class="socials__item">
-            <a href="#" aria-label="Техномарт во вконтакте">
-              <img src="img/vk-icon.svg" width="26" height="15" alt="Вконтакте" />
-            </a>
-          </li>
-          <li class="socials__item">
-            <a href="#" aria-label="Техномарт в фейсбуке">
-              <img src="img/fb-icon.svg" width="12" height="22" alt="Фейсбук" />
-            </a>
-          </li>
-          <li class="socials__item">
-            <a href="#" aria-label="Техномарт в инстаграме">
-              <img src="img/insta-icon.svg" width="21" height="21" alt="Инстаграм" />
-            </a>
-          </li>
-        </ul>
-        <p class="feedback">
-          Обратная связь:<br />
-          <a class="feedback__link" href="mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-        </p>
-        <p class="autor">
-          Разработано —<br />
-          <a class="autor__link" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
-        </p>
       </div>
     </footer>
 

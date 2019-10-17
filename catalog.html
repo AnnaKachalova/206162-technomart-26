@@ -18,31 +18,33 @@
     <header class="header">
       <nav class="nav">
         <!-- Первая строка навигации -->
-        <div class="nav-first__container container">
-          <a class="logo__link" href="index.html">
-            <img
-              class="logo__img"
-              src="img/logo.png"
-              width="109"
-              height="19"
-              alt="Логотип сайта ТЕХНОМАРТ"
-            />
-          </a>
-          <ul class="nav-first__list">
-            <li class="nav-first__item nav-first__item--search">
-              <input type="text" class="search__button" placeholder="Поиск:" />
-              <label class="search__button--icon"></label>
-            </li>
-            <li class="nav-first__item nav-first__item--bookmarks">
-              <a href="#">Закладки: <span class="bookmarks-count">0</span></a>
-            </li>
-            <li class="nav-first__item nav-first__item--basket">
-              <a href="#">Корзина: <span class="basket-count">0</span></a>
-            </li>
-            <li class="nav-first__item nav-first__item--checkout">
-              <a href="#">Оформить заказ</a>
-            </li>
-          </ul>
+        <div class="nav-first__container">
+          <div class="container">
+            <a class="logo__link" href="index.html">
+              <img
+                class="logo__img"
+                src="img/logo.png"
+                width="109"
+                height="19"
+                alt="Логотип сайта ТЕХНОМАРТ"
+              />
+            </a>
+            <ul class="nav-first__list">
+              <li class="nav-first__item nav-first__item--search">
+                <input type="text" class="search__button" placeholder="Поиск:" />
+                <label class="search__button--icon"></label>
+              </li>
+              <li class="nav-first__item nav-first__item--bookmarks">
+                <a href="#">Закладки: <span class="bookmarks-count">0</span></a>
+              </li>
+              <li class="nav-first__item nav-first__item--basket">
+                <a href="#">Корзина: <span class="basket-count">0</span></a>
+              </li>
+              <li class="nav-first__item nav-first__item--checkout">
+                <a href="#">Оформить заказ</a>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <!-- Вторая строка навигации -->
@@ -101,11 +103,22 @@
           <aside class="filters">
             <h3 class="filters__title">ФИЛЬТР:</h3>
             <form action="https://echo.htmlacademy.ru" method="POST" class="form_filters">
-              <fieldset>
+              <fieldset class="price__fieldset">
                 <h4 class="price__title">ЦЕНА:</h4>
-                <input type="range" name="range" min="1" max="30000" step="1" />
+                <div class="multi-range">
+                  <div class="hr">
+                    <div class="hr-green"></div>
+                  </div>
+                  <div class="min-range"></div>
+                  <div class="max-range"></div>
+                </div>
+                <div class="range-values">
+                  <input class="min-range-value" type="text" name="price-min" value="0" />
+                  <span>—</span>
+                  <input class="max-range-value" type="text" name="price-min" value="30000" />
+                </div>
               </fieldset>
-              <fieldset>
+              <fieldset class="manufacturer__fieldset">
                 <h4 class="manufacturer__title">ПРОИЗВОДИТЕЛИ:</h4>
                 <input type="checkbox" name="manufacturer" value="bosch" id="bosch-field" checked />
                 <label for="bosch-field">BOSCH</label>
@@ -128,7 +141,7 @@
                 <input type="checkbox" name="manufacturer" value="hitachi" id="hitachi-field" />
                 <label for="hitachi-field">Hitachi</label>
               </fieldset>
-              <fieldset>
+              <fieldset class="power__fieldset">
                 <h4 class="power__title">ПИТАНИЕ:</h4>
                 <input type="radio" name="power" id="rechargeable_field" checked />
                 <label for="rechargeable_field">Аккумуляторные</label>
@@ -145,14 +158,16 @@
             <section class="sort">
               <h3 class="sort__title">СОРТИРОВКА:</h3>
               <ul class="sort__list">
-                <li class="sort__item"><button type="button">ПО ЦЕНЕ</button></li>
+                <li class="sort__item sort__item--active">
+                  <button type="button">ПО ЦЕНЕ</button>
+                </li>
                 <li class="sort__item"><button type="button">ПО ТИПУ</button></li>
                 <li class="sort__item"><button type="button">ПО ФУНКЦИОНАЛУ</button></li>
+                <li class="sort__item sort__item--bottom sort__item--bottom-active">
+                  <button type="button" aria-label="по убыванию"></button>
+                </li>
                 <li class="sort__item sort__item--top">
                   <button type="button" aria-label="по возрастанию"></button>
-                </li>
-                <li class="sort__item sort__item--bottom">
-                  <button type="button" aria-label="по убыванию"></button>
                 </li>
               </ul>
             </section>
@@ -239,7 +254,7 @@
                   <p class="price-old__text">22500 Р.</p>
                   <p class="price__text">15500 Р.</p>
                 </li>
-                <li class="catalog-goods_item">
+                <li class="catalog-goods_item item__new">
                   <img
                     class="catalog-goods_img"
                     src="img/perforator_2.jpg"
@@ -359,10 +374,13 @@
           <h3 class="about-good__title">ПАРА СЛОВ О ПЕРФОРАТОРАХ</h3>
           <p class="about-good__text">
             Перфоратор — универсальный строительный инструмент. Предназначен для сверления и
-            долбления отверстий в кирпиче, бетоне и камне. Существуют электромеханические и
-            пневматические перфораторы. Современные модели могут выполнять функции дрели,
-            шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в
-            одном устройстве будут совмещены отбойный молоток и ударная дрель.
+            долбления отверстий в кирпиче, бетоне и камне.
+          </p>
+          <p class="about-good__text">
+            Существуют электромеханические и пневматические перфораторы. Современные модели могут
+            выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть
+            выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная
+            дрель.
           </p>
         </div>
       </section>
@@ -401,36 +419,40 @@
           </ul>
         </div>
       </div>
-      <div class="container feedback__container">
-        <div class="rights__container">
-          <p>© 2010–2019 Компания «Техномарт»</p>
-          <p>Все права защищены</p>
+      <div class="feedback__container">
+        <div class="container">
+          <div class="rights__container">
+            <p>© 2010–2019 Компания «Техномарт»</p>
+            <p>Все права защищены</p>
+          </div>
+          <ul class="socials__list">
+            <li class="socials__item">
+              <a href="#" aria-label="Техномарт во вконтакте">
+                <img src="img/vk-icon.svg" width="26" height="15" alt="Вконтакте" />
+              </a>
+            </li>
+            <li class="socials__item">
+              <a href="#" aria-label="Техномарт в фейсбуке">
+                <img src="img/fb-icon.svg" width="12" height="22" alt="Фейсбук" />
+              </a>
+            </li>
+            <li class="socials__item">
+              <a href="#" aria-label="Техномарт в инстаграме">
+                <img src="img/insta-icon.svg" width="21" height="21" alt="Инстаграм" />
+              </a>
+            </li>
+          </ul>
+          <p class="feedback">
+            Обратная связь:<br />
+            <a class="feedback__link" href="mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </p>
+          <p class="autor">
+            Разработано —<br />
+            <a class="autor__link" href="https://htmlacademy.ru/intensive/htmlcss"
+              >htmlacademy.ru</a
+            >
+          </p>
         </div>
-        <ul class="socials__list">
-          <li class="socials__item">
-            <a href="#" aria-label="Техномарт во вконтакте">
-              <img src="img/vk-icon.svg" width="26" height="15" alt="Вконтакте" />
-            </a>
-          </li>
-          <li class="socials__item">
-            <a href="#" aria-label="Техномарт в фейсбуке">
-              <img src="img/fb-icon.svg" width="12" height="22" alt="Фейсбук" />
-            </a>
-          </li>
-          <li class="socials__item">
-            <a href="#" aria-label="Техномарт в инстаграме">
-              <img src="img/insta-icon.svg" width="21" height="21" alt="Инстаграм" />
-            </a>
-          </li>
-        </ul>
-        <p class="feedback">
-          Обратная связь:<br />
-          <a class="feedback__link" href="mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-        </p>
-        <p class="autor">
-          Разработано —<br />
-          <a class="autor__link" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
-        </p>
       </div>
     </footer>
 

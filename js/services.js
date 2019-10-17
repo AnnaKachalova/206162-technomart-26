@@ -6,10 +6,12 @@
   let descriptions = Array.from(servicesDescription);
 
   let changeServiceDescription = function(evt) {
-    descriptions.forEach(function(description) {
+    descriptions.forEach(function(description, i) {
       description.style.display = 'none';
+      services[i].classList.remove('services__button--selected');
     });
     const index = services.indexOf(evt.target);
+    services[index].classList.add('services__button--selected');
     descriptions[index].style.display = 'flex';
   };
 
