@@ -1,12 +1,13 @@
 (function() {
   // Переключение банеров
   let banners = document.querySelectorAll('.banner-main');
+  let bannersArray = Array.prototype.slice.call(banners, 0);
   let buttonLeft = document.querySelector('.banner-main__before');
   let buttonRight = document.querySelector('.banner-main__after');
   banners[0].style.display = 'none';
 
   let changeMainBanner = function() {
-    banners.forEach(function(banner) {
+    bannersArray.forEach(function(banner) {
       banner.style.display = banner.style.display === 'none' ? 'block' : 'none';
     });
   };
