@@ -4,11 +4,7 @@
     <meta charset="utf-8" />
     <title>HTML Academy: Техномарт</title>
     <link
-      href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i&display=swap&subset=cyrillic"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap&subset=cyrillic"
+      href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i%7cPT+Sans:400,400i,700,700i&display=swap&subset=cyrillic"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/normalize.css" />
@@ -126,6 +122,15 @@
                 <a href="catalog.html" class="banner-main__link button">ОТКРЫТЬ КАТАЛОГ</a>
               </div>
               <div class="banner-main__after"></div>
+              <ul class="banner-main__button-list">
+                <li><button type="button" class="banner-main__button-item"></button></li>
+                <li>
+                  <button
+                    type="button"
+                    class="banner-main__button-item banner-main__button-item-active"
+                  ></button>
+                </li>
+              </ul>
             </div>
           </div>
 
@@ -332,6 +337,9 @@
                 <p class="services-description__text">
                   Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.
                 </p>
+                <button class="button services-description__button-send" type="button">
+                  ОТПРАВИТЬ ЗАЯВКУ
+                </button>
               </div>
               <img src="img/credit.png" width="465" height="285" alt="Изображение денег" />
             </div>
@@ -367,6 +375,7 @@
             <p class="contacts_text">
               Вы можете забрать товар сами, заехав в наш офис:
             </p>
+
             <img
               class="contacts_img"
               src="img/map.jpg"
@@ -374,7 +383,10 @@
               height="158"
               alt="Изображение карты"
             />
-            <button class="contacts_button button" type="button">ЗАБЛУДИЛИСЬ? НАПИШИТЕ НАМ!</button>
+
+            <button class="contacts_button button" type="button">
+              ЗАБЛУДИЛИСЬ? НАПИШИТЕ НАМ!
+            </button>
           </section>
         </div>
       </section>
@@ -394,7 +406,7 @@
           <ul class="pagination__list">
             <li class="pagination__item"><a href="#">Компания</a></li>
             <li class="pagination__item"><a href="#">Новости</a></li>
-            <li class="pagination__item"><a href="#">Каталог</a></li>
+            <li class="pagination__item"><a href="catalog.html">Каталог</a></li>
             <li class="pagination__item"><a href="#">Доставка</a></li>
             <li class="pagination__item"><a href="#">Контакты</a></li>
           </ul>
@@ -437,11 +449,11 @@
             </li>
           </ul>
           <p class="feedback">
-            Обратная связь:<br />
+            <span>Обратная связь:</span>
             <a class="feedback__link" href="mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </p>
           <p class="autor">
-            Разработано —<br />
+            <span>Разработано —</span>
             <a class="autor__link" href="https://htmlacademy.ru/intensive/htmlcss"
               >htmlacademy.ru</a
             >

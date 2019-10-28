@@ -3,14 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>HTML Academy: Техномарт</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i&display=swap&subset=cyrillic"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap&subset=cyrillic"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i%7cPT+Sans:400,400i,700,700i&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -62,7 +55,10 @@
               </div>
             </li>
             <li class="nav-second__item">
-              <div class="nav-second_name">Равшан Джамшутович</div>
+              <div class="nav-second_name">
+                <span>Равшан Джамшутович</span>
+                <a href="#" class="log-out__link"></a>
+              </div>
               <a href="#" class="orders__link">Мои заказы</a>
               <a href="#" class="personal-account__link">Личный кабинет</a>
             </li>
@@ -121,10 +117,10 @@
               <fieldset class="manufacturer__fieldset">
                 <h4 class="manufacturer__title">ПРОИЗВОДИТЕЛИ:</h4>
                 <input type="checkbox" name="manufacturer" value="bosch" id="bosch-field" checked />
-                <label for="bosch-field">BOSCH</label>
+                <label for="bosch-field" class="checkbox-label">BOSCH</label>
 
                 <input type="checkbox" name="manufacturer" value="interskol" id="interskol-field" />
-                <label for="interskol-field">ИНТЕРСКОЛ</label>
+                <label for="interskol-field" class="checkbox-label">ИНТЕРСКОЛ</label>
 
                 <input
                   type="checkbox"
@@ -133,21 +129,21 @@
                   id="makita-field"
                   checked
                 />
-                <label for="makita-field">MAKIta</label>
+                <label for="makita-field" class="checkbox-label">MAKIta</label>
 
                 <input type="checkbox" name="manufacturer" value="dewalt" id="dewalt-field" />
-                <label for="dewalt-field">Dewalt</label>
+                <label for="dewalt-field" class="checkbox-label">Dewalt</label>
 
                 <input type="checkbox" name="manufacturer" value="hitachi" id="hitachi-field" />
-                <label for="hitachi-field">Hitachi</label>
+                <label for="hitachi-field" class="checkbox-label">Hitachi</label>
               </fieldset>
               <fieldset class="power__fieldset">
                 <h4 class="power__title">ПИТАНИЕ:</h4>
                 <input type="radio" name="power" id="rechargeable_field" checked />
-                <label for="rechargeable_field">Аккумуляторные</label>
+                <label for="rechargeable_field" class="radio-label">Аккумуляторные</label>
 
                 <input type="radio" name="power" id="network_field" />
-                <label for="network_field">Сетевые</label>
+                <label for="network_field" class="radio-label">Сетевые</label>
               </fieldset>
               <input type="submit" value="Показать" class="filters__button" />
             </form>
@@ -400,7 +396,7 @@
           <ul class="pagination__list">
             <li class="pagination__item"><a href="#">Компания</a></li>
             <li class="pagination__item"><a href="#">Новости</a></li>
-            <li class="pagination__item"><a href="#">Каталог</a></li>
+            <li class="pagination__item"><a href="catalog.html">Каталог</a></li>
             <li class="pagination__item"><a href="#">Доставка</a></li>
             <li class="pagination__item"><a href="#">Контакты</a></li>
           </ul>
@@ -443,11 +439,11 @@
             </li>
           </ul>
           <p class="feedback">
-            Обратная связь:<br />
+            <span>Обратная связь:</span>
             <a class="feedback__link" href="mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </p>
           <p class="autor">
-            Разработано —<br />
+            <span>Разработано —</span>
             <a class="autor__link" href="https://htmlacademy.ru/intensive/htmlcss"
               >htmlacademy.ru</a
             >
