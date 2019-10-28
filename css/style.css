@@ -236,7 +236,6 @@ a {
   padding: 0;
   margin-top: 46px;
   display: flex;
-  /*justify-content: space-between;*/
   align-items: flex-start;
   flex-wrap: wrap;
 }
@@ -334,16 +333,7 @@ a {
   left: 14px;
   top: 13px;
 }
-/*.nav-second_name::after {
-  content: '';
-  width: 21px;
-  height: 17px;
-  position: absolute;
 
-  background-image: url('../img/icon-logout.svg');
-  right: 10px;
-  top: 14px;
-}*/
 .nav-second_name span {
   display: inline-flex;
   vertical-align: middle;
