@@ -1674,7 +1674,7 @@ textarea {
   background-color: #565656;
   background-image: url('../img/big_map.png');
   width: 940px;
-  min-height: 447px;
+  height: 447px;
 
   position: fixed;
   top: 120px;
