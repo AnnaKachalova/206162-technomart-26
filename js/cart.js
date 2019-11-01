@@ -9,8 +9,7 @@
   const ESC_KEYCODE = 27;
 
   let showPopup = function() {
-    popupSuccess.style.display = 'block';
-
+    popupSuccess.classList.add('popup-show');
     let onPopupMapButtonClose = function() {
       hidePopup(popupSuccess);
     };
@@ -27,7 +26,7 @@
 
     //
     let hidePopup = function(popupSuccess) {
-      popupSuccess.style.display = 'none';
+      popupSuccess.classList.remove('popup-show');
       popupSuccessButtonClose.removeEventListener('click', onPopupMapButtonClose);
       popupSuccessButtonContinue.removeEventListener('click', onPopupMapButtonClose);
       document.removeEventListener('keydown', onDocumentKeydown);
@@ -67,4 +66,15 @@
   buttonsBookmarkArray.forEach(function(button) {
     button.addEventListener('click', onButtonBookmark);
   });
+
+  // Сбрасываем у верхних ссылок preventDefault
+  let onLinkPreventDefault = function(evt) {
+    evt.preventDefault();
+  };
+  const bookmarksLink = document.querySelector('.bookmarks__link');
+  const basketLink = document.querySelector('.basket__link');
+  const orderLink = document.querySelector('.order__link');
+  bookmarksLink.addEventListener('click', onLinkPreventDefault);
+  basketLink.addEventListener('click', onLinkPreventDefault);
+  orderLink.addEventListener('click', onLinkPreventDefault);
 })();

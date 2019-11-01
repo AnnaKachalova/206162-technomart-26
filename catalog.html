@@ -3,7 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <title>HTML Academy: Техномарт</title>
-    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i%7cPT+Sans:400,400i,700,700i&display=swap&subset=cyrillic" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i%7cPT+Sans:400,400i,700,700i&display=swap&subset=cyrillic"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
@@ -28,13 +31,17 @@
                 <label class="search__button--icon"></label>
               </li>
               <li class="nav-first__item nav-first__item--bookmarks">
-                <a href="#">Закладки: <span class="bookmarks-count">0</span></a>
+                <a class="bookmarks__link" href="bookmarks.html">
+                  Закладки: <span class="bookmarks-count">0</span>
+                </a>
               </li>
               <li class="nav-first__item nav-first__item--basket">
-                <a href="#">Корзина: <span class="basket-count">0</span></a>
+                <a class="basket__link" href="basket.html">
+                  Корзина: <span class="basket-count">0</span>
+                </a>
               </li>
               <li class="nav-first__item nav-first__item--checkout">
-                <a href="#">Оформить заказ</a>
+                <a class="order__link" href="toorder.html">Оформить заказ</a>
               </li>
             </ul>
           </div>
@@ -117,10 +124,10 @@
               <fieldset class="manufacturer__fieldset">
                 <h4 class="manufacturer__title">ПРОИЗВОДИТЕЛИ:</h4>
                 <input type="checkbox" name="manufacturer" value="bosch" id="bosch-field" checked />
-                <label for="bosch-field" class="checkbox-label">BOSCH</label>
+                <label for="bosch-field" class="checkbox-label" tabindex="0">BOSCH</label>
 
                 <input type="checkbox" name="manufacturer" value="interskol" id="interskol-field" />
-                <label for="interskol-field" class="checkbox-label">ИНТЕРСКОЛ</label>
+                <label for="interskol-field" class="checkbox-label" tabindex="0">ИНТЕРСКОЛ</label>
 
                 <input
                   type="checkbox"
@@ -129,21 +136,23 @@
                   id="makita-field"
                   checked
                 />
-                <label for="makita-field" class="checkbox-label">MAKIta</label>
+                <label for="makita-field" class="checkbox-label" tabindex="0">MAKIta</label>
 
                 <input type="checkbox" name="manufacturer" value="dewalt" id="dewalt-field" />
-                <label for="dewalt-field" class="checkbox-label">Dewalt</label>
+                <label for="dewalt-field" class="checkbox-label" tabindex="0">Dewalt</label>
 
                 <input type="checkbox" name="manufacturer" value="hitachi" id="hitachi-field" />
-                <label for="hitachi-field" class="checkbox-label">Hitachi</label>
+                <label for="hitachi-field" class="checkbox-label" tabindex="0">Hitachi</label>
               </fieldset>
               <fieldset class="power__fieldset">
                 <h4 class="power__title">ПИТАНИЕ:</h4>
                 <input type="radio" name="power" id="rechargeable_field" checked />
-                <label for="rechargeable_field" class="radio-label">Аккумуляторные</label>
+                <label for="rechargeable_field" class="radio-label" tabindex="0"
+                  >Аккумуляторные</label
+                >
 
                 <input type="radio" name="power" id="network_field" />
-                <label for="network_field" class="radio-label">Сетевые</label>
+                <label for="network_field" class="radio-label" tabindex="0">Сетевые</label>
               </fieldset>
               <input type="submit" value="Показать" class="filters__button" />
             </form>

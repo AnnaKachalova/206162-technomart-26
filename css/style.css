@@ -159,6 +159,9 @@ a {
   opacity: 0.3;
   z-index: 100;
 }
+.nav-first__item--search:hover .search__button--icon {
+  opacity: 1;
+}
 .search__button:focus + label {
   background-image: url('../img/icon-search-red.svg');
   opacity: 1;
@@ -309,10 +312,16 @@ a {
 .registration__button:hover {
   color: #ee3643;
 }
+.login__button:hover::before {
+  background-image: url('../img/icon-login-hover.svg');
+}
 .login__button:active,
 .registration__button:active {
   opacity: 0.3;
   color: #000000;
+}
+.login__button:active::before {
+  background-image: url('../img/icon-login.svg');
 }
 .nav-second_name {
   color: #000000;
@@ -333,7 +342,15 @@ a {
   left: 14px;
   top: 13px;
 }
-
+.nav-second_name:hover::before {
+  background-image: url('../img/icon-user-hover.svg');
+}
+.nav-second_name:active {
+  opacity: 0.3;
+}
+.nav-second_name:active::before {
+  background-image: url('../img/icon-user.svg');
+}
 .nav-second_name span {
   display: inline-flex;
   vertical-align: middle;
@@ -346,9 +363,13 @@ a {
   vertical-align: middle;
   margin-left: 32px;
 }
-.nav-second_name:active {
-  opacity: 0.3;
+.nav-second_name:hover .log-out__link {
+  background-image: url('../img/icon-logout-hover.svg');
 }
+.nav-second_name:active .log-out__link {
+  background-image: url('../img/icon-logout.svg');
+}
+
 .orders__link,
 .personal-account__link {
   color: #32425c;
@@ -377,6 +398,9 @@ a {
 .orders__link:hover,
 .personal-account__link:hover {
   color: #ee3643;
+}
+.personal-account__link:hover::before {
+  color: #32425c;
 }
 .orders__link:active,
 .personal-account__link:active {
@@ -959,6 +983,7 @@ fieldset {
 .power__title {
   margin-bottom: -4px;
 }
+/* checkbox */
 input[type='checkbox'] {
   display: none;
 }
@@ -978,6 +1003,30 @@ input[type='checkbox']:checked + label:before {
   background-image: url('../img/checkbox-on.svg');
   background-repeat: no-repeat;
 }
+/* hover */
+input[type='checkbox']:hover + label:before {
+  background-image: url('../img/checkbox-off-hover.svg');
+  background-repeat: no-repeat;
+}
+input[type='checkbox']:checked:hover + label:before {
+  background-image: url('../img/checkbox-on-hover.svg');
+  background-repeat: no-repeat;
+}
+/* disabled */
+input[type='checkbox']:disabled + label:before {
+  background-image: url('../img/checkbox-off-hover.svg');
+  background-repeat: no-repeat;
+  opacity: 0.3;
+}
+input[type='checkbox']:checked:disabled + label:before {
+  background-image: url('../img/checkbox-on-hover.svg');
+  background-repeat: no-repeat;
+  opacity: 0.3;
+}
+input[type='checkbox']:disabled + label {
+  opacity: 0.4;
+}
+/* radio */
 input[type='radio'] {
   display: none;
 }
@@ -996,6 +1045,26 @@ input[type='radio'] + label:before {
 input[type='radio']:checked + label:before {
   background-image: url('../img/radio-on.svg');
 }
+/* hover */
+input[type='radio']:hover + label:before {
+  background-image: url('../img/radio-off-hover.svg');
+}
+input[type='radio']:checked:hover + label:before {
+  background-image: url('../img/radio-on-hover.svg');
+}
+/*disabled*/
+input[type='radio']:disabled + label:before {
+  background-image: url('../img/radio-off-hover.svg');
+  opacity: 0.3;
+}
+input[type='radio']:checked:disabled + label:before {
+  background-image: url('../img/radio-on-hover.svg');
+  opacity: 0.3;
+}
+input[type='radio']:disabled + label {
+  opacity: 0.4;
+}
+
 .form_filters label {
   font-size: 15px;
   line-height: 20px;
@@ -1133,13 +1202,16 @@ input[type='radio']:checked + label:before {
   box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
 }
 
-.catalog-goods_item:hover .catalog-goods_buttons--block {
+.catalog-goods_item:hover .catalog-goods_buttons--block,
+.popular-goods__item:hover .popular-goods_buttons--block {
   display: block;
 }
-.catalog-goods_item:hover img {
+.catalog-goods_item:hover img,
+.popular-goods__item:hover img {
   display: none;
 }
-.catalog-goods_buttons--block {
+.catalog-goods_buttons--block,
+.popular-goods_buttons--block {
   display: none;
   min-height: 173px;
   padding: 44px 0 31px 0;
@@ -1725,4 +1797,24 @@ textarea {
 }
 .success-popup__button-continue {
   color: #000000;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+  70% {
+    transform: translateY(30px);
+  }
+  90% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.popup-show {
+  display: block;
+  animation-name: bounce;
+  animation-duration: 0.6s;
 }

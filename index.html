@@ -31,11 +31,17 @@
                 <label class="search__button--icon"></label>
               </li>
               <li class="nav-first__item nav-first__item--bookmarks">
-                <a href="#">Закладки: 0</a>
+                <a class="bookmarks__link" href="bookmarks.html">
+                  Закладки: <span class="bookmarks-count">0</span>
+                </a>
               </li>
-              <li class="nav-first__item nav-first__item--basket"><a href="#">Корзина: 0</a></li>
+              <li class="nav-first__item nav-first__item--basket">
+                <a class="basket__link" href="basket.html">
+                  Корзина: <span class="basket-count">0</span>
+                </a>
+              </li>
               <li class="nav-first__item nav-first__item--checkout">
-                <a href="#">Оформить заказ</a>
+                <a class="order__link" href="toorder.html">Оформить заказ</a>
               </li>
             </ul>
           </div>
@@ -109,19 +115,19 @@
             </div>
             <!-- Главный баннер -->
             <div class="banner-main__container">
-              <div class="banner-main__before"></div>
+              <div class="banner-main__before" tabindex="0"></div>
 
               <div class="banner-main banner-main--rotary-hammers">
                 <h3 class="banner-main__title">Перфораторы</h3>
                 <p class="banner-main__text">Настоящие мужские игрушки</p>
                 <a href="catalog.html" class="banner-main__link button">ОТКРЫТЬ КАТАЛОГ</a>
               </div>
-              <div class="banner-main banner-main--drills ">
+              <div class="banner-main banner-main--drills">
                 <h3 class="banner-main__title">Дрели</h3>
                 <p class="banner-main__text">Соседям на радость!</p>
                 <a href="catalog.html" class="banner-main__link button">ОТКРЫТЬ КАТАЛОГ</a>
               </div>
-              <div class="banner-main__after"></div>
+              <div class="banner-main__after" tabindex="0"></div>
               <ul class="banner-main__button-list">
                 <li><button type="button" class="banner-main__button-item"></button></li>
                 <li>
@@ -193,6 +199,12 @@
                 height="170"
                 alt="Превью товара перфоратор BOSCH BFG 9000"
               />
+              <div class="popular-goods_buttons--block">
+                <button type="submit" class="catalog-goods_button--buy">Купить</button>
+                <button type="submit" class="catalog-goods_button--to-bookmarks">
+                  В закладки
+                </button>
+              </div>
               <h3 class="popular-goods__title">
                 Перфоратор BOSCH BFG 9000
               </h3>
@@ -206,6 +218,12 @@
                 height="170"
                 alt="Превью товара перфоратор BOSCH BFG 3000"
               />
+              <div class="popular-goods_buttons--block">
+                <button type="submit" class="catalog-goods_button--buy">Купить</button>
+                <button type="submit" class="catalog-goods_button--to-bookmarks">
+                  В закладки
+                </button>
+              </div>
               <h3 class="popular-goods__title">
                 Перфоратор BOSCH BFG 3000
               </h3>
@@ -219,6 +237,12 @@
                 height="170"
                 alt="Превью товара перфоратор BOSCH BFG 6000"
               />
+              <div class="popular-goods_buttons--block">
+                <button type="submit" class="catalog-goods_button--buy">Купить</button>
+                <button type="submit" class="catalog-goods_button--to-bookmarks">
+                  В закладки
+                </button>
+              </div>
               <h3 class="popular-goods__title">
                 Перфоратор BOSCH BFG 6000
               </h3>
@@ -232,6 +256,12 @@
                 height="170"
                 alt="Превью товара перфоратор BOSCH BFG 2000"
               />
+              <div class="popular-goods_buttons--block">
+                <button type="submit" class="catalog-goods_button--buy">Купить</button>
+                <button type="submit" class="catalog-goods_button--to-bookmarks">
+                  В закладки
+                </button>
+              </div>
               <h3 class="popular-goods__title">
                 Перфоратор BOSCH BFG 2000
               </h3>
@@ -375,18 +405,20 @@
             <p class="contacts_text">
               Вы можете забрать товар сами, заехав в наш офис:
             </p>
-
-            <img
-              class="contacts_img"
-              src="img/map.jpg"
-              width="300"
-              height="158"
-              alt="Изображение карты"
-            />
-
-            <button class="contacts_button button" type="button">
-              ЗАБЛУДИЛИСЬ? НАПИШИТЕ НАМ!
-            </button>
+            <a class="contacts__link--img" href="img/big_map.png">
+              <img
+                class="contacts_img"
+                src="img/map.jpg"
+                width="300"
+                height="158"
+                alt="Изображение карты"
+              />
+            </a>
+            <a class="contacts__link--button" href="writeus.html">
+              <button class="contacts_button button" type="button">
+                ЗАБЛУДИЛИСЬ? НАПИШИТЕ НАМ!
+              </button>
+            </a>
           </section>
         </div>
       </section>
@@ -475,7 +507,7 @@
         <div class="feedback-popup__header">
           <p>
             <label for="name-field">Ваше имя:</label>
-            <input type="text" name="name" id="name-field" placeholder="Имя Фамилия" required />
+            <input type="text" name="name" id="name-field" placeholder="Имя Фамилия" required autofocus/>
           </p>
           <p>
             <label for="email-field">Ваш e-mail:</label>
@@ -510,8 +542,20 @@
       ></iframe>
       <button class="map-popup__button-close" type="button" aria-label="Закрыть окно"></button>
     </section>
+    <!-- popup окно подтверждения добавления товара в корзину-->
+    <section class="success-popup">
+      <h2 class="visually-hidden">Окно подтверждения добавления товара в корзину</h2>
+      <button class="success-popup__button-close" type="button" aria-label="Закрыть окно"></button>
+      <p class="success-popup__text">Товар добавлен в корзину!</p>
+
+      <div class="success-popup__footer">
+        <button class="success-popup__button-continue" type="button">Продолжить покупки</button>
+        <a class="success-popup__link-checkout button" href="#">Оформить заказ</a>
+      </div>
+    </section>
     <script src="js/services.min.js"></script>
     <script src="js/banners.min.js"></script>
     <script src="js/popups.min.js"></script>
+    <script src="js/cart.min.js"></script>
   </body>
 </html>
