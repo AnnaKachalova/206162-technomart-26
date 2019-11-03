@@ -22,6 +22,7 @@
       popup.classList.remove('popup-show');
       popupButtonClose.removeEventListener('click', onPopupMapButtonClose);
       document.removeEventListener('keydown', onDocumentKeydown);
+      popup.classList.remove('popup-error');
     };
   };
 
@@ -39,6 +40,17 @@
   const popupFeedback = document.querySelector('.feedback-popup');
   const buttonFeedback = document.querySelector('.contacts__link--button');
   const popupFeedbackButtonClose = popupFeedback.querySelector('.feedback-popup__button-close');
+  const formFeedback = popupFeedback.querySelector('.feedback-popup__form');
+
+  let onFormFeedback = function(evt){
+    const nameField = formFeedback.querySelector('.name-field');
+    const emailField = formFeedback.querySelector('.email-field');
+    if(!nameField.value || !emailField.value){
+      evt.preventDefault();
+      popupFeedback.classList.add('popup-error');
+    }
+  }
+  formFeedback.addEventListener('submit', onFormFeedback);
 
   let onPopupFeedback = function(evt) {
     evt.preventDefault();
